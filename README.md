@@ -82,7 +82,7 @@ Logotipo na barra de navegação muda de cor e gira como uma moeda ao passar o m
 
 # 🖥️ CSS do Blog
 <div align="center">
-  <img src="./blog.png" alt="Bog Banner"/>
+  <img src="./blog.png" alt="Blog Banner"/>
 </div>
 CSS do arquivo `index_blog.html` e das `sub_pages` do blog. Veja os destaques:
 
