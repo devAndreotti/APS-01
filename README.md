@@ -13,21 +13,27 @@
 </div>
 
 ## 📋 Sobre o Projeto
-
 Este projeto educacional foi desenvolvido para destacar práticas que promovem um ambiente de trabalho seguro e saudável, enfatizando a proteção do meio ambiente. Ele é composto por páginas que exploram diversos aspectos de segurança ocupacional e sustentabilidade.
 
+Aqui está uma versão melhorada da apresentação da estrutura do projeto:
+
 ## 🚀 Estrutura do Projeto
+```
+├── html
+│   ├── index.html
+│   ├── blog
+│   │   ├── index_blog.html
+│   │   └── sub_pages
+│   │       ├── index_certificados.html
+│   │       ├── index_dds.html
+│   │       └── index_normas.html
+└── README.md
+```
 
-O projeto está organizado da seguinte forma:
 
-- `html/`
-  - `index.html`: Página principal do projeto.
-  - `blog/`
-    - `index_blog.html`: Página inicial do blog.
-    - `sub_pages/`
-      - `index_certificados.html`: Página de certificações.
-      - `index_dds.html`: Página de DDS (Diálogo Diário de Segurança).
-      - `index_normas.html`: Página sobre normas de segurança.
+
+
+
 
 ## 🌟 Características Principais
 
