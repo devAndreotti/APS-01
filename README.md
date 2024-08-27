@@ -120,3 +120,15 @@ Cursor personalizado muda de forma e tamanho ao passar sobre elementos interativ
 
 ## 📚 Glossário Responsivo
 O glossário se move com a rolagem da página, mantendo as informações sempre visíveis.
+
+# 💪 Como Contribuir
+Contribuições são bem-vindas! Siga estas etapas para colaborar:
+1. Faça um fork do projeto.
+2. Crie uma nova branch para sua feature: `git checkout -b feature/nome-feature`.
+3. Commit suas mudanças: `git commit -m 'Adiciona nova feature'`.
+4. Envie para a branch: `git push origin feature/nome-feature`.
+5. Abra um Pull Request.
+
+# 📝 Nota
+Este projeto foi desenvolvido como parte de um trabalho em grupo para a faculdade, realizado uma vez a cada semestre. O trabalho envolve a criação de soluções práticas e aplicáveis que demonstrem o conhecimento adquirido ao longo do curso.
+
