@@ -1,3 +1,4 @@
+<!-- Projeto Finalizado -->
 # 🌍 Earth Solutions
 <p align="center">
   <!-- Contador de linguagens do GitHub -->
@@ -13,9 +14,19 @@
 </div>
 
 ## 📋 Sobre o Projeto
-Este projeto educacional foi desenvolvido para destacar práticas que promovem um ambiente de trabalho seguro e saudável, enfatizando a proteção do meio ambiente. Ele é composto por páginas que exploram diversos aspectos de segurança ocupacional e sustentabilidade.
+Este projeto educacional é um trabalho da faculdade que destaca práticas para um ambiente de trabalho seguro e sustentável, com páginas sobre segurança ocupacional e proteção ambiental.
 
-Aqui está uma versão melhorada da apresentação da estrutura do projeto:
+## 🌟 Características Principais
+- **Conteúdo Informativo**: Informações sobre segurança no trabalho e práticas sustentáveis.
+- **Interatividade**: Exploração de recursos dinâmicos utilizando CSS e JavaScript.
+- **Design Responsivo**: O layout se adapta a diferentes tamanhos de tela.
+
+## 🧭 Guia de Implementação
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/devAndreotti/APS-01.git
+   ```
+2. **Abra o arquivo `index.html` no navegador**.
 
 ## 🚀 Estrutura do Projeto
 ```
@@ -41,143 +52,65 @@ Aqui está uma versão melhorada da apresentação da estrutura do projeto:
 └── README.md                               # Documentação do projeto
 ```
 
-
-
-
-
-
-## 🌟 Características Principais
-- **Design Responsivo**: O layout se adapta a diferentes tamanhos de tela.
-- **Conteúdo Informativo**: Informações sobre segurança no trabalho e práticas sustentáveis.
-- **Interatividade**: Exploração de recursos dinâmicos utilizando CSS e JavaScript.
-
-## 🛠️ Tecnologias Utilizadas
-- **HTML5**
-- **CSS3**
-- **JavaScript**
-- **FontAwesome**: Ícones para navegação e design visual.
-
-## 📄 Como Utilizar
-1. **Clone o repositório**:
-   ```bash
-   git clone https://github.com/seu-usuario/earth-solutions.git
-   ```
-2. **Navegue até a pasta do projeto**:
-   ```bash
-   cd earth-solutions/html
-   ```
-3. **Abra o arquivo `index.html` no navegador**.
-
-## 🎯 Objetivo
-Este projeto é para fins educacionais. Sinta-se livre para explorar, modificar e adaptar conforme necessário.
-
-
-
-
-
-
-
-
-# 🎨 CSS Institucional
-O CSS do arquivo `index.html` foi projetado para oferecer um visual moderno e interativo ao site. Confira os principais destaques:
+# 🖥️ CSS Institucional
+O CSS do arquivo `index.html` foi projetado para um visual moderno e fácil modificação. Confira os destaques:
 
 ## 1. Importação de Fontes 🅰️
-Utilizamos fontes do Google Fonts, como **"Montserrat"** e **"Poppins"**, para criar uma tipografia limpa e elegante. Diversas variações de peso e estilo garantem uma leitura agradável e um design sofisticado.
+Fontes do Google Fonts, como **"Montserrat"** e **"Poppins"**, garantem tipografia elegante e legível.
 
 ## 2. Definição de Variáveis de Cor 🎨
-As variáveis CSS definidas no `:root` garantem um esquema de cores consistente em toda a página, facilitando a manutenção e a coesão visual do design.
-
-## 3. Estilo do Cursor 🖱️
-Implementamos um cursor customizado em formato circular que responde dinamicamente ao movimento e à interação com os elementos da página. Isso proporciona uma experiência de navegação única e envolvente.
+Variáveis CSS no `:root` asseguram um esquema de cores consistente e fácil manutenção.
 
 ## 4. Barra de Rolagem 🌀
-Personalizamos a barra de rolagem para se alinhar com o esquema de cores do site, oferecendo uma experiência visual diferenciada e harmônica com o design geral.
+Barra de rolagem personalizada alinha-se ao esquema de cores do site para uma experiência visual harmoniosa.
 
-## 5. Estilos Globais 🌍
-O CSS redefine estilos globais, removendo margens, paddings e bordas padrão, e utiliza `box-sizing: border-box` para garantir um controle de layout mais simples e uniforme.
+## 5. Barra de Navegação 📍
+Barra fixa no topo muda de cor ao rolar e vira menu hambúrguer em telas menores, melhorando a usabilidade.
 
-## 6. Barra de Navegação 📍
-A barra de navegação é fixa no topo da página e muda de cor conforme o usuário rola. Isso melhora a usabilidade e a estética, mantendo a navegação sempre visível e acessível.
+## 6. Logo 🌟
+Logotipo na barra de navegação muda de cor e gira como uma moeda ao passar o mouse, destacando a identidade do site.
 
-## 7. Logo 🌟
-O logotipo na barra de navegação muda suavemente de cor ao passar o mouse, destacando a identidade visual do site e oferecendo um toque interativo.
+## 7. Seções do Conteúdo 📚
+- **Características:** Layout flexível com efeitos de `hover` em caixas de conteúdo.
+- **Razão:** Texto centralizado com efeitos de `hover` destacando o texto.
+- **Recursos:** Organização automática e efeitos interativos em texto e imagens.
+- **Sobre:** Efeitos de deslocamento no texto para melhor legibilidade.
+- **Rodapé:** Estilização com botões arredondados e feedback visual interativo.
 
-## 8. Seções do Conteúdo 📚
-- **Características:** Layout flexível com efeitos de `hover` que destacam as caixas de conteúdo e proporcionam uma interação visual suave.
-- **Razão:** Centralização de conteúdo com efeitos de `hover` que destacam o texto ao passar o mouse.
-- **Recursos:** Organização automática em múltiplas linhas e efeitos interativos tanto em texto quanto em imagens para uma experiência mais envolvente.
-- **Sobre:** Efeitos de deslocamento no texto para melhorar a legibilidade e interação.
-- **Rodapé:** Estilização do rodapé com botões arredondados e feedback visual ao interagir, oferecendo uma navegação final agradável.
-
-
-
-
-
-
-
-
-
-
-# 🖌️ Resumo do CSS do Blog
-O CSS do blog foi elaborado para proporcionar uma experiência visual agradável e envolvente. Veja os destaques abaixo:
+# 🖥️ CSS do Blog
+O CSS do arquivo `index_blog.html` oferece uma experiência visual agradável e envolvente. Veja os destaques:
 
 ## 1. Importação de Fontes 🅰️
-Estamos utilizando fontes elegantes do Google Fonts, como **"Montserrat"** e **"Poppins"**, para uma tipografia moderna e diversificada.
+Fontes elegantes do Google Fonts, como **"Montserrat"** e **"Poppins"**, garantem uma tipografia moderna.
 
 ## 2. Definição de Variáveis de Cor 🎨
-As variáveis CSS no `:root` definem um esquema de cores vibrante e coerente, garantindo um design harmonioso:
-- **Barra de Navegação**: Cores e gradientes sofisticados para o cabeçalho e links.
-- **Conteúdo**: Cores de fundo e texto que criam um contraste atraente e legível.
-- **Cursor**: Personalização do cursor para uma interação visual interessante.
-- **Barra de Rolagem**: Estilo único que combina com o esquema de cores do site.
+Variáveis CSS no `:root` asseguram um esquema de cores consistente e fácil manutenção.
 
-## 3. Cursor Customizado 🖱️
-Um cursor redondo e animado foi implementado, que gira continuamente e aumenta de tamanho ao passar sobre elementos, oferecendo um feedback visual divertido.
+## 3. Barra de Rolagem 🌀
+Design personalizado da barra de rolagem melhora a estética e a navegação no blog.
 
-## 4. Barra de Rolagem 🌀
-A barra de rolagem tem um design personalizado que melhora a estética geral do blog e oferece uma experiência de navegação mais integrada.
+## 4. Barra de Navegação 📍
+- **Estilo e Layout:** Fixa no topo com gradientes e sombras para um visual moderno.
+- **Interação:** Logotipo e links mudam de cor e transformam ao passar o mouse.
 
-## 5. Estilos Base 🌍
-- **Fonte e Layout**: Definição global de fonte e ajuste de tamanho para uma apresentação consistente.
-- **Espaçamento e Alinhamento**: Uso de margens, paddings e box-sizing para um layout fluido e responsivo.
+## 5. Conteúdo 📚
+- **Bloco de Conteúdo:** Estilização com fundo e bordas arredondadas.
+- **Imagens:** Centralização e ajuste com bordas arredondadas.
+- **Glossário e Contato:** Estilos para listas e botões interativos.
 
-## 6. Barra de Navegação 📍
-- **Estilo e Layout**: A barra de navegação é fixa no topo e utiliza gradientes e sombras para um visual moderno.
-- **Interação**: O logotipo e links mudam de cor e transformam ao passar o mouse, proporcionando uma interação suave.
-
-## 7. Conteúdo 📚
-- **Bloco de Conteúdo**: Estilização do conteúdo principal com fundo e bordas arredondadas.
-- **Imagens**: Centralização e ajuste de imagens com bordas arredondadas para um visual limpo.
-- **Glossário e Contato**: Estilos para seções específicas com detalhes como listas e botões interativos.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 🖥️ JavaScript: Interatividade e Funcionalidade
+# 🖥️ JavaScript
 
 ## 🎨 Mudança de Cor da Barra de Navegação
-A barra de navegação adapta sua cor ao rolar a página, criando uma transição visual suave que destaca a interação do usuário com o site.
+A barra de navegação muda de cor ao rolar, oferecendo uma transição visual suave.
 
-## 🔻 Ocultação da Barra de Navegação no Final da Página
-Para uma experiência de leitura mais limpa, a barra de navegação desaparece quando o usuário chega perto do final da página e reaparece conforme necessário.
+## 🔻 Ocultação da Barra de Navegação no Final
+A barra desaparece ao chegar ao final da página e reaparece conforme necessário para uma leitura limpa.
 
 ## 🧭 Navegação Suave
-Cada clique em um link proporciona uma transição suave entre as seções, eliminando movimentos bruscos e melhorando a fluidez da navegação pelo site.
+Transições suaves entre seções evitam movimentos bruscos e melhoram a fluidez da navegação.
 
-## 🎯 Cursor Customizado
-O cursor é personalizado para oferecer uma interação visual diferenciada, mudando de forma e tamanho ao passar sobre elementos interativos.
+## 🖱️ Cursor Customizado
+Cursor personalizado muda de forma e tamanho ao passar sobre elementos interativos.
 
 ## 📚 Glossário Responsivo
-O glossário acompanha o movimento de rolagem da página, garantindo que as informações estejam sempre visíveis e acessíveis.
+O glossário se move com a rolagem da página, mantendo as informações sempre visíveis.
