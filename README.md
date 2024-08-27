@@ -53,6 +53,9 @@ Este projeto educacional é um trabalho da faculdade que destaca práticas para 
 ```
 
 # 🖥️ CSS Institucional
+<div align="center">
+  <img src="./under.png" alt="Under Banner"/>
+</div>
 O CSS do arquivo `index.html` foi projetado para um visual moderno e fácil modificação. Confira os destaques:
 
 ## 1. Importação de Fontes 🅰️
@@ -78,6 +81,9 @@ Logotipo na barra de navegação muda de cor e gira como uma moeda ao passar o m
 - **Rodapé:** Estilização com botões arredondados e feedback visual interativo.
 
 # 🖥️ CSS do Blog
+<div align="center">
+  <img src="./blog.png" alt="Bog Banner"/>
+</div>
 CSS do arquivo `index_blog.html` e das `sub_pages` do blog. Veja os destaques:
 
 ## 1. Importação de Fontes 🅰️
