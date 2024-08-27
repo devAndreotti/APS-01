@@ -19,15 +19,27 @@ Aqui está uma versão melhorada da apresentação da estrutura do projeto:
 
 ## 🚀 Estrutura do Projeto
 ```
-├── html
-│   ├── index.html
-│   ├── blog
-│   │   ├── index_blog.html
-│   │   └── sub_pages
-│   │       ├── index_certificados.html
-│   │       ├── index_dds.html
-│   │       └── index_normas.html
-└── README.md
+├── html/                                   # Diretório principal do HTML
+│   ├── index.html                          # Página principal do projeto
+│   ├── blog/                               # Diretório do blog
+│   │   ├── index_blog.html                 # Página inicial do blog
+│   │   └── sub_pages/                      # Subpáginas do blog
+│   │       ├── index_certificacoes.html    # Página de certificações
+│   │       ├── index_dds.html              # Página sobre DDS
+│   │       └── index_normas.html           # Página sobre normas de segurança
+├── assets/                                 # Diretório de recursos adicionais
+│   ├── css/                                # Arquivos de estilo CSS
+│   │   ├── style_blog.css                  # Estilo para a página do blog
+│   │   └── style_index.css                 # Estilo para a página principal
+│   ├── img/                                # Imagens do projeto
+│   │   ├── blog/                           # Imagens específicas do blog
+│   │   ├── icons/                          # Ícones
+│   │   └── safety/                         # Imagens relacionadas à segurança
+│   ├── js/                                 # Scripts JavaScript
+│   │   └── main.js                         # Script principal do projeto
+│   └── vd/                                 # Vídeos e outros recursos multimídia
+└── README.md                               # Documentação do projeto
+
 ```
 
 
