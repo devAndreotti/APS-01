@@ -78,7 +78,7 @@ Logotipo na barra de navegação muda de cor e gira como uma moeda ao passar o m
 - **Rodapé:** Estilização com botões arredondados e feedback visual interativo.
 
 # 🖥️ CSS do Blog
-O CSS do arquivo `index_blog.html` oferece uma experiência visual agradável e envolvente. Veja os destaques:
+CSS do arquivo `index_blog.html` e das `sub_pages` do blog. Veja os destaques:
 
 ## 1. Importação de Fontes 🅰️
 Fontes elegantes do Google Fonts, como **"Montserrat"** e **"Poppins"**, garantem uma tipografia moderna.
