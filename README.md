@@ -131,4 +131,3 @@ Contribuições são bem-vindas! Siga estas etapas para colaborar:
 
 # 📝 Nota
 Este projeto foi desenvolvido como parte de um trabalho em grupo para a faculdade, realizado uma vez a cada semestre. O trabalho envolve a criação de soluções práticas e aplicáveis que demonstrem o conhecimento adquirido ao longo do curso.
-
