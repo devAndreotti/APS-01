@@ -52,6 +52,10 @@ Este projeto educacional é um trabalho da faculdade que destaca práticas para 
 └── README.md                               # Documentação do projeto
 ```
 
+## 🔗 Visualize o Projeto
+Acesse a aplicação diretamente pelo link:
+👉 [**Earth Solutions**](https://devandreotti.github.io/APS-01/)
+
 # 🖥️ CSS Institucional
 <div align="center">
   <img src="./under.png" alt="Under Banner"/>
