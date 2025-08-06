@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+
+
+/* Definindo Variáveis -------------------------------------------------------------------------------------------------- */
+
+:root {
+
+  /* Barra de Navegação ------------------------------------------ */
+
+  --logo-hover: hsl(200, 100%, 30%, 1);
+
+  --header-0-background: linear-gradient(90deg, hsl(210, 30%, 15%, 1) 0%, hsl(200, 100%, 30%, 1) 100%);
+
+  --header-outside-anchor: hsl(0, 0%, 99%, 1);
+  --header-inside-anchor: hsl(0, 0%, 99%, 1);
+
+
+
+  /* Conteúdo ---------------------------------------------------- */
+
+  --body-background: linear-gradient(90deg, hsl(200, 50%, 30%), hsl(200, 100%, 25%, 1) 100%);
+  --main-background: hsl(200, 100%, 25%, 1);
+
+  --main-title-letter: hsl(0, 0%, 99%, 1);
+
+  --main-secondary-letter: hsl(219, 15%, 66%, 1);
+  --main-primary-letter: hsl(0, 0%, 99%, 1);
+
+  --button-background: hsl(0, 0%, 99%, 1);
+
+  --button-color: hsl(200, 100%, 15%, 1);
+  --button-hover: hsl(200, 100%, 25%, 1);
+
+
+
+  /* Cursor ------------------------------------------------------ */
+
+  --cursor-color: hsl(0, 0%, 99%, 1);
+
+
+
+  /* Barra de Rolagem -------------------------------------------- */
+
+  --scroll-bar-hover: hsl(200, 100%, 10%, 0.5);
+  --scroll-bar-thumb: hsl(200, 100%, 10%, 0.7);
+  --scroll-bar-color: hsl(200, 100%, 20%, 0.7);
+
+
+
+  /* Cores ------------------------------------------------------- */
+
+  --possible-0-color: linear-gradient(90deg, hsl(270, 30%, 20%, 1) 0%, hsl(270, 100%, 30%, 1) 100%);
+  --possible-1-color: linear-gradient(90deg, hsl(180, 30%, 20%, 1) 0%, hsl(180, 100%, 30%, 1) 100%);
+  --possible-2-color: linear-gradient(90deg, hsl(210, 30%, 20%, 1) 0%, hsl(200, 100%, 30%, 1) 100%);
+  --possible-3-color: linear-gradient(90deg, hsl(120, 30%, 20%, 1) 0%, hsl(120, 100%, 30%, 1) 100%);
+  --possible-4-color: linear-gradient(90deg, hsl(50, 100%, 20%, 1) 0%, hsl(60, 100%, 30%, 1) 100%);
+  --possible-5-color: linear-gradient(90deg, hsl(160, 30%, 20%, 1) 0%, hsl(160, 30%, 50%, 1) 100%);
+  --possible-6-color: linear-gradient(90deg, hsl(10, 100%, 20%, 1) 0%, hsl(20, 100%, 30%, 1) 100%);
+  --possible-7-color: linear-gradient(90deg, hsl(30, 30%, 20%, 1) 0%, hsl(30, 30%, 50%, 1) 100%);
+  --possible-8-color: linear-gradient(90deg, hsl(0, 0%, 20%, 1) 0%, hsl(0, 0%, 30%, 1) 100%);
+
+}
+
+
+
+/* Cursor --------------------------------------------------------------------------------------------------------------- */
+
+* {
+  cursor: none !important;
+}
+
+.cursor {
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--cursor-color);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.4s, height 0.4s, transform 0.4s;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 4px;
+  background-color: transparent;
+  mix-blend-mode: difference ;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.cursor.hovered {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  transform: translate(-50%, -50%) rotate(90deg);
+  background: var(--cursor-color);
+}
+
+.cursor-container.cursor-disabled .cursor {
+  display: none;
+}
+
+
+
+/* Barra de Rolagem ----------------------------------------------------------------------------------------------------- */
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-bar-hover);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-bar-thumb);
+}
+
+::-webkit-scrollbar {
+  background: var(--scroll-bar-color);
+  width: 0.60rem;
+}
+
+
+
+/* Base ----------------------------------------------------------------------------------------------------------------- */
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  outline: none; border: none;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0; padding: 0;
+  font-size: 1.4rem;
+}
+
+html {
+  scroll-padding-top: 10rem;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-size: 80%;
+}
+
+body {
+  background: var(--body-background);
+}
+
+a, img {
+  text-transform: uppercase;
+  transition: 0.3s ease-out;
+}
+
+
+
+/* Barra de Navegação --------------------------------------------------------------------------------------------------- */
+
+#blog-navbar {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#blog-navbar-container {
+  box-shadow: -5px 8px 10px 5px rgba(0, 0, 0, 0.4);
+  background: var(--header-0-background);
+  text-transform: capitalize;
+  border-radius: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-top: 45px;
+
+}
+
+
+
+#logo {
+  align-items: center;
+  list-style: none;
+  display: flex;
+}
+
+#logo img:hover {
+  transform: rotate3d(0, 1, 0, 360deg);
+}
+
+#logo img {
+  transition: transform 1s ease-out;
+  margin-right: 10px;
+  margin-top: 7px;
+  width: 80px;
+}
+
+#logo h1:hover {
+  transition: 0.3s ease-out;
+  color: var(--logo-hover);
+}
+
+#logo h1 {
+  color: var(--header-outside-anchor);
+  transition: 0.3s ease-out;
+  font-size: 1.9rem;
+  margin-left: 5px;
+  list-style: none;
+}
+
+
+
+#blog-navbar-items {
+  list-style: none;
+  display: flex;
+}
+
+#blog-navbar-items a:not(:last-child) {
+  margin-right: 30px;
+}
+
+#navbar-items a:first-child {
+  margin-left: 30px;
+}
+
+a.inside-anchor:hover,
+a.outside-anchor:hover {
+  letter-spacing: 0.1vmin;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+a.inside-anchor {
+  color: var(--header-inside-anchor);
+  line-height: 30px;
+  font-weight: 600;
+}
+
+a.outside-anchor {
+  color: var(--header-outside-anchor);
+  line-height: 30px;
+  font-weight: 600;
+}
+
+
+
+/* Cnteúdo -------------------------------------------------------------------------------------------------------------- */
+
+#content-container {
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+  gap: 50px;
+}
+
+#left-content {
+  width: auto;
+  box-shadow: -5px 8px 10px 5px rgba(0, 0, 0, 0.4);
+  background: var(--main-background);
+  margin-bottom: 50px;
+  border-radius: 20px;
+  margin-left: 50px;
+  margin-top: 50px;
+  padding: 30px;
+}
+
+#left-content h1{
+  color: var(--main-title-letter);
+  text-transform: none;
+}
+
+p{
+  color: var(--main-secondary-letter);
+  text-transform: none;
+  text-align: justify;
+}
+
+.img{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: auto;
+}
+
+.inside-img{
+  width: 330px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+}
+
+
+
+#glossary {
+  box-shadow: -5px 8px 10px 5px rgba(0, 0, 0, 0.4);
+  background: var(--main-background);
+  color: var(--main-title-letter);
+  border-radius: 20px;
+  margin-right: 50px;
+  margin-top: 50px;
+  padding: 20px;
+  height: auto;
+}
+
+#contact-container {
+  box-shadow: -5px 8px 10px 5px rgba(0, 0, 0, 0.4);
+  background: var(--main-background);
+  color: var(--main-title-letter);
+  border-radius: 20px;
+  margin-right: 50px;
+  margin-top: 50px;
+  padding: 20px;
+  height: auto;
+}
+
+#glossary ul {
+  padding: 0;
+}
+
+.lista_conteudo{
+  margin-left: 30px;
+}
+
+#glossary h2,
+#glossary ul {
+  margin-left: 20px;
+}
+
+#glossary li {
+  margin-bottom: 10px;
+}
+
+#glossary li:last-child {
+  margin-bottom: 0;
+}
+
+#glossary ul li a {
+  color: var(--main-title-letter);
+}
+
+#glossary ul li a {
+  font-size: 10px;
+}
+
+#glossary ul li ul li a {
+  font-size: 10px;
+}
+
+#glossary p {
+  text-align: left;
+}
+
+
+
+
+#contact {
+  display: flex;
+  justify-content: space-between; /* ou space-around */
+  gap: 15px
+}
+
+#contact a:hover {
+  background: var(--button-hover);
+  transform: translateY(5px);
+}
+
+#contact a {
+  background: var(--button-color);
+  color: var(--button-background);
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  margin: 0.1rem;
+  height: 4rem;
+  width: 2em;
+}
+
+
+
+
+
+
+
+
+/* @Media Altura -------------------------------------------------------------------------------------------------------- */
+
+@media(max-height: 790px) {
+
+  #content-container {
+    gap: 25px;
+  }
+
+  #blog-navbar-container {
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 20px;
+  
+  }
+
+  #left-content {
+    margin-bottom: 25px;;
+    margin-left: 25px;
+    margin-top: 25px;
+  }
+
+  #glossary {
+    margin-right: 25px;
+    margin-top: 25px;
+  }
+
+  #contact-container {
+    margin-right: 25px;
+    margin-top: 25px;
+
+  }
+  }
+
+@media(max-height: 690px) {
+  
+  #contact-container {
+    display: none;
+  }
+  }
+
+
+
+
+
+
+
+
+/* @Media Largura ------------------------------------------------------------------------------------------------------- */
+
+@media(max-width: 1200px) {
+
+  html {
+   font-size: 80%;
+ }
+ }
+
+@media(max-width: 1000px) {
+
+  a,p,h1 {
+    font-size: 80%;
+  }
+
+  #content-container {
+    gap: 25px;
+  }
+
+  #blog-navbar-container {
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 20px;
+  }
+
+
+
+  #left-content {
+    margin-bottom: 25px;
+    margin-left: 25px;
+    margin-top: 25px;
+  }
+
+  #glossary {
+    margin-right: 25px;
+    margin-top: 25px;
+  }
+
+  #contact-container{
+    margin-right: 25px;
+    margin-top: 25px;
+  }
+
+  #logo h1 {
+   font-size: 1.4rem;
+  }
+
+  #blog-navbar img {
+    width: 50px;
+  }
+
+  #blog-navbar-items a:not(:last-child) {
+    margin-right: 15px;
+  }
+  
+  #navbar-items a:first-child {
+    margin-left: 15px;
+  }
+
+  #contact {
+    gap: 5px
+  }
+  }
+
+@media(max-width: 900px) {
+
+  #left-content {
+    width: 100%;
+  }
+  
+  #glossary{
+    display: none;
+  }
+
+  #contact-container{
+    display: none;
+  }
+
+  #logo h1 {
+    display: none;
+  }
+  }
+
+  @media(max-width: 700px) {
+
+  a,p,h1 {
+    font-size: 60%;
+  }
+
+  #blog-navbar {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  #content-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #left-content {
+    width: 80%;
+  }
+  }

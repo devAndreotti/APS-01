@@ -1,0 +1,1036 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+
+
+/* Definindo Variáveis para as cores ------------------------------------------------------------------------------------------------------------- */
+
+:root {
+
+  /* Barra de Navegação ------------------------------------------ */
+
+  --logo-hover: hsl(200, 100%, 30%, 1);
+
+  --header-0-background: linear-gradient(90deg, hsla(210, 30%, 20%, 0) 0%, hsla(200, 100%, 30%, 0) 100%);
+  --header-1-background: linear-gradient(90deg, hsl(210, 30%, 15%, 1) 0%, hsl(200, 100%, 30%, 1) 100%);
+
+  --header-hamburguer-color: hsl(0, 0%, 99%, 1);
+  --header-hamburguer-open: hsl(200, 100%, 15%, 0);
+
+  --header-outside-anchor: hsl(219, 15%, 66%, 1);
+  --header-inside-anchor: hsl(0, 0%, 99%, 1);
+
+
+
+  /* Conteúdo Principal ------------------------------------------ */
+
+  --main-button-color: hsl(200, 100%, 15%, 1);
+  --main-button-hover: hsl(200, 100%, 25%, 1);
+
+  --main-video-color: hsl(200, 100%, 15%, 1);
+
+  --main-features: linear-gradient(90deg, hsl(0, 0%, 0%, 1) 0%, hsl(200, 100%, 25%, 1) 100%);
+  --main-feature-box: hsl(200, 100%, 30%, 0.7);
+
+  --main-reason: linear-gradient(90deg, hsl(210, 30%, 15%, 1) 0%, hsl(200, 100%, 30%, 1) 100%);
+
+  --main-resources: linear-gradient(90deg, hsl(0, 0%, 0%, 1) 0%, hsl(200, 100%, 25%, 1) 100%);
+
+  --main-about: linear-gradient(90deg, hsl(210, 30%, 15%, 1) 0%, hsl(200, 100%, 30%, 1) 100%);
+
+  --main-secondary-letter: hsl(219, 15%, 66%, 1);
+  --main-primary-letter: hsl(0, 0%, 99%, 1);
+
+
+
+  /* Rodapé ------------------------------------------------------ */
+
+  --footer-contact: linear-gradient(90deg, hsl(0, 0%, 0%) 0%, hsl(200, 100%, 25%, 1) 100%);
+  --footer-navbar: linear-gradient(90deg, hsl(0, 0%, 0%) 0%, hsl(200, 100%, 25%, 1) 100%);
+  --footer-created: linear-gradient(90deg, hsl(0, 0%, 0%) 0%, hsl(200, 100%, 25%, 1) 100%);
+
+  --footer-secondary-letter: hsl(219, 15%, 66%, 1);
+  --footer-primary-letter: hsl(0, 0%, 99%, 1);
+
+  --footer-button-color: hsl(200, 100%, 15%, 1);
+  --footer-button-hover: hsl(200, 100%, 25%, 1);
+
+
+
+  /* Cursor ------------------------------------------------------ */
+
+  --cursor-color: hsl(0, 0%, 99%, 1);
+
+
+
+  /* Barra de Rolagem -------------------------------------------- */
+
+  --scroll-bar-hover: hsl(200, 100%, 10%, 0.5);
+  --scroll-bar-thumb: hsl(200, 100%, 10%, 0.7);
+  --scroll-bar-color: hsl(200, 100%, 20%, 0.7);
+
+
+
+  /* Cores ------------------------------------------------------- */
+
+  --possible-0-color: linear-gradient(90deg, hsl(270, 30%, 20%, 1) 0%, hsl(270, 100%, 30%, 1) 100%);
+  --possible-1-color: linear-gradient(90deg, hsl(180, 30%, 20%, 1) 0%, hsl(180, 100%, 30%, 1) 100%);
+  --possible-2-color: linear-gradient(90deg, hsl(210, 30%, 20%, 1) 0%, hsl(200, 100%, 30%, 1) 100%);
+  --possible-3-color: linear-gradient(90deg, hsl(120, 30%, 20%, 1) 0%, hsl(120, 100%, 30%, 1) 100%);
+  --possible-4-color: linear-gradient(90deg, hsl(50, 100%, 20%, 1) 0%, hsl(60, 100%, 30%, 1) 100%);
+  --possible-5-color: linear-gradient(90deg, hsl(160, 30%, 20%, 1) 0%, hsl(160, 30%, 50%, 1) 100%);
+  --possible-6-color: linear-gradient(90deg, hsl(10, 100%, 20%, 1) 0%, hsl(20, 100%, 30%, 1) 100%);
+  --possible-7-color: linear-gradient(90deg, hsl(30, 30%, 20%, 1) 0%, hsl(30, 30%, 50%, 1) 100%);
+  --possible-8-color: linear-gradient(90deg, hsl(0, 0%, 20%, 1) 0%, hsl(0, 0%, 30%, 1) 100%);
+
+}
+
+
+
+/* Cursor ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+* {
+  cursor: none !important; /* Remove o cursor padrão em toda a página */
+}
+
+.cursor {
+  position: fixed; /* Posiciona o cursor customizado de forma fixa na tela */
+  top: -10px; /* Define a posição do cursor para que fique centralizado com o ponteiro do mouse */
+  left: -10px; /* Define a posição do cursor para que fique centralizado com o ponteiro do mouse */
+  width: 15px; /* Define a largura inicial do cursor customizado */
+  height: 15px; /* Define a altura inicial do cursor customizado */
+  border: 2px solid var(--cursor-color); /* Define a cor da borda do cursor usando uma variável CSS */
+  border-radius: 50%; /* Faz o cursor ser circular */
+  pointer-events: none; /* Impede que o cursor interfira em qualquer evento de clique ou interação */
+  z-index: 9999; /* Garante que o cursor fique acima de todos os outros elementos na página */
+  transition: width 0.4s, height 0.4s, transform 0.4s; /* Define transições suaves ao alterar o tamanho e a rotação do cursor */
+  transform: translate(-50%, -50%) rotate(45deg); /* Centraliza o cursor em relação à sua posição e o rotaciona em 45 graus */
+  border-radius: 4px; /* Redefine o raio da borda para 4px (um quadrado com cantos arredondados) */
+  background-color: transparent; /* Define a cor de fundo como transparente */
+  mix-blend-mode: difference; /* Altera a cor do cursor de acordo com o fundo, criando um contraste */
+  animation: spin 2s linear infinite; /* Aplica uma animação de rotação contínua ao cursor */
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg); /* Define o estado inicial da animação sem rotação */
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg); /* Define o estado final da animação com rotação completa (360 graus) */
+  }
+}
+
+.cursor.hovered { 
+  width: 20px; /* Aumenta a largura do cursor ao interagir com um elemento que tem a classe 'hovered' */
+  height: 20px; /* Aumenta a altura do cursor ao interagir com um elemento que tem a classe 'hovered' */
+  border-radius: 4px; /* Mantém os cantos do cursor ligeiramente arredondados */
+  transform: translate(-50%, -50%) rotate(90deg); /* Rotaciona o cursor em 90 graus ao interagir com um elemento que tem a classe 'hovered' */
+  background: var(--cursor-color); /* Define a cor de fundo do cursor ao interagir com um elemento que tem a classe 'hovered' */
+}
+
+.cursor-container.cursor-disabled .cursor {
+  display: none; /* Oculta o cursor completamente quando um elemento tem a classe 'cursor-disabled' */
+}
+
+
+
+/* Barra de Rolagem ------------------------------------------------------------------------------------------------------------------------------ */
+
+::-webkit-scrollbar-thumb:hover { /* webkit é o motor de renderização que alimenta vários navegadores, e o uso de -webkit- no CSS permite aplicar estilos específicos para esses navegadores (aqui usados para mudar a cor e tamanho)*/
+  background: var(--scroll-bar-hover); /* Altera a cor da barra de rolagem (a parte que o usuário pode arrastar) ao passar o mouse sobre ele, usando uma variável CSS para definir a cor */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-bar-thumb); /* Define a cor padrão quando a barra de rolagem não está sendo arrastada */
+}
+
+::-webkit-scrollbar {
+  background: var(--scroll-bar-color); /* Define a cor de fundo da barra de rolagem (a trilha da barra) usando uma variável CSS */
+  width: 0.60rem; /* Define a largura da barra de rolagem para 0.60rem */
+}
+
+
+
+/* Base ------------------------------------------------------------------------------------------------------------------------------------------ */
+
+* { /* Reset de estilos */
+  font-family: 'Montserrat', sans-serif; /* Define a fonte padrão como 'Montserrat' para todos os elementos, com 'sans-serif' como fonte de reserva */
+  outline: none; border: none; /* Remove a borda e o contorno de todos os elementos (útil para evitar o contorno padrão em botões e campos de formulário) */
+  text-transform: capitalize; /* Converte o primeiro caractere de cada palavra para maiúsculo para todos os textos */
+  box-sizing: border-box; /* Altera o modelo de caixa para incluir o padding e a borda dentro do tamanho total do elemento */
+  text-decoration: none; /* Remove sublinhados e outras decorações de texto de todos os elementos */
+  margin: 0; padding: 0; /* Remove as margens e o preenchimento padrão de todos os elementos */
+  font-size: 1.4rem; /* Define o tamanho da fonte padrão para 1.4rem (rem é uma unidade relativa ao tamanho da fonte do elemento raiz) */
+}
+
+html {
+  scroll-padding-top: 10rem; /* Adiciona um espaçamento de 10rem ao topo da página quando a rolagem automática é usada, útil para evitar que o conteúdo fique encoberto por um cabeçalho fixo */
+  scroll-behavior: smooth; /* Ativa uma rolagem suave para links de âncora e rolagens programáticas */
+  overflow-x: hidden; /* Esconde qualquer conteúdo que transborde horizontalmente da página */
+  font-size: 80%; /* Reduz o tamanho da fonte base para 80% do tamanho padrão do navegador, o que influencia o tamanho relativo das fontes em rem */
+}
+
+a, img {
+  text-transform: uppercase; /* Converte o texto de links e descrições alternativas de imagens para letras maiúsculas */
+  transition: 0.3s ease-out; /* Aplica uma transição suave de 0,3 segundos para mudanças de estilo em links e imagens (como cor, tamanho, etc.) */
+}
+
+.home-text-content, .feature-box, .reason-text-content, .resources-text-content, .about-text-content, .created-by-container {
+  transition: 0.3s ease-out; /* Aplica uma transição suave de 0,3 segundos para mudanças de estilo em vários elementos da página (como seções de texto e caixas de recursos) */
+}
+
+
+
+/* Barra de Navegação ---------------------------------------------------------------------------------------------------------------------------- */
+
+/* INÍCIO - Referente ao formato, cor, tamanho e posição da barra ------------------------------------- */
+#navbar-container {
+  background: var(--header-0-background); /* Define a cor de fundo inicial da barra de navegação usando uma variável CSS */
+  position: fixed; /* Faz com que a barra de navegação permaneça fixa no topo da tela, mesmo quando o usuário rolar a página */
+  height: 12vh; /* Define a altura da barra de navegação como 12% da altura da viewport (altura da janela do navegador) */
+  width: 100vw; /* Define a largura da barra de navegação para ocupar 100% da largura da viewport */
+  z-index: 2; /* Garante que a barra de navegação fique acima de outros elementos da página, sem se sobrepor a elementos com z-index mais alto */
+}
+
+#navbar-container.scrolled {
+  background: var(--header-1-background); /* Altera a cor de fundo da barra de navegação quando a página é rolada, aplicando uma nova variável CSS */
+}
+
+#navbar {
+  justify-content: space-between; /* Distribui os elementos dentro da barra de navegação de forma que fiquem espaçados igualmente nas extremidades */
+  align-items: center; /* Alinha verticalmente os itens no centro da barra de navegação */
+  display: flex; /* Exibe os itens da barra de navegação em um layout flexível, permitindo o alinhamento e a distribuição definidos anteriormente */
+  margin: auto; /* Centraliza a barra de navegação horizontalmente dentro do seu contêiner */
+  height: 100%; /* Define a altura do conteúdo da barra de navegação para ocupar 100% da altura do contêiner pai (#navbar-container) */
+  width: 82%; /* Define a largura do conteúdo da barra de navegação para ocupar 82% da largura do contêiner pai */
+}
+/* FIM - Referente à composição da barra ---------------------------------------- */
+
+
+
+/* INÍCIO - Referente à logo ---------------------------------------------------- */
+#logo {
+  align-items: center; /* Alinha verticalmente o conteúdo do elemento #logo ao centro */
+  list-style: none; /* Remove o estilo de lista padrão, caso #logo seja uma lista (ul, ol ou li) */
+  display: flex; /* Exibe o conteúdo do elemento #logo em um layout flexível, permitindo o alinhamento definido anteriormente */
+}
+
+#logo h1:hover {
+  transition: color 0.3s ease-out; /* Aplica uma transição suave de 0,3 segundos na mudança da cor do texto ao passar o mouse sobre o elemento h1 */
+  color: var(--logo-hover); /* Altera a cor do texto h1 para a cor definida na variável CSS --logo-hover quando o mouse passa por cima */
+}
+
+#logo h1 {
+  color: var(--header-inside-anchor); /* Define a cor padrão do texto h1 usando a variável CSS --header-inside-anchor */
+  transition: color 0.3s ease-out; /* Aplica uma transição suave de 0,3 segundos na mudança da cor do texto */
+  font-size: 1.9rem; /* Define o tamanho da fonte do texto h1 como 1.9rem */
+  margin-left: 5px; /* Adiciona uma margem à esquerda de 5px no texto h1 */
+  list-style: none; /* Remove qualquer estilo de lista padrão que possa estar associado ao elemento h1 */
+}
+
+#navbar-container img:hover {
+  transform: rotate3d(0, 1, 0, 360deg); /* Rotaciona a imagem 360 graus ao longo do eixo Y ao passar o mouse sobre ela, criando um efeito 3D */
+}
+
+#navbar-container img {
+  transition: transform 1s ease-out; /* Aplica uma transição suave de 1 segundo na transformação da imagem (como rotação) */
+  margin-right: 10px; /* Adiciona uma margem à direita de 10px na imagem */
+  margin-top: 7px; /* Adiciona uma margem superior de 7px na imagem */
+  width: 80px; /* Define a largura da imagem para 80px */
+}
+/* FIM - Referente à logo ------------------------------------------------------- */
+
+
+
+/* INÍCIO - Referente aos itens da barra ---------------------------------------- */
+#navbar-items {
+  list-style: none; /* Remove o estilo de lista padrão dos itens de navegação, como marcadores ou números */
+  display: flex; /* Exibe os itens de navegação em um layout flexível, alinhando-os horizontalmente */
+}
+
+#navbar-items a:not(:last-child) {
+  margin-right: 30px; /* Adiciona uma margem à direita de 30px a todos os links dentro de #navbar-items, exceto o último */
+}
+
+#navbar-items a:first-child {
+  margin-left: 30px; /* Adiciona uma margem à esquerda de 30px ao primeiro link dentro de #navbar-items */
+}
+
+a.inside-anchor:hover,
+a.outside-anchor:hover {
+  letter-spacing: 0.1vmin; /* Aumenta o espaçamento entre letras em 0.1vmin (uma unidade relativa ao tamanho da viewport) ao passar o mouse sobre o link */
+  font-weight: bold; /* Torna o texto do link em negrito ao passar o mouse */
+  line-height: 30px; /* Define a altura da linha para 30px ao passar o mouse */
+  font-size: 1.6rem; /* Aumenta o tamanho da fonte para 1.6rem ao passar o mouse */
+}
+
+a.inside-anchor {
+  color: var(--header-inside-anchor); /* Define a cor do texto para links com a classe inside-anchor usando a variável CSS --header-inside-anchor */
+  line-height: 30px; /* Define a altura da linha para 30px */
+  font-weight: 600; /* Define o peso da fonte (espessura) para 600, que é um pouco mais grosso que o normal */
+}
+
+a.outside-anchor {
+  color: var(--header-outside-anchor); /* Define a cor do texto para links com a classe outside-anchor usando a variável CSS --header-outside-anchor */
+  line-height: 30px; /* Define a altura da linha para 30px */
+  font-weight: 600; /* Define o peso da fonte (espessura) para 600 */
+}
+/* FIM - Referente aos itens da barra ------------------------------------------- */
+
+
+
+/* Menu Expandido -------------------------------------------------------------------------------------------------------------------------------- */
+
+.checkbtn {
+  color: var(--header-hamburguer-color); /* Define a cor do botão de menu (hambúrguer) usando a variável CSS --header-hamburguer-color */
+  cursor: pointer; /* Altera o cursor para um ponteiro (mãozinha) ao passar sobre o botão, indicando que é clicável */
+  display: none; /* Oculta o botão de menu por padrão */
+}
+
+#check {
+  display: none; /* Oculta o checkbox #check por padrão, usado para controlar a abertura do menu */
+}
+
+@media (max-width: 750px) {
+  
+  .checkbtn {
+    display: flex; /* Exibe o botão de menu (hambúrguer) como um elemento flexível quando a largura da tela é de 750px ou menos */
+  }
+  
+  #navbar-items {
+    background: var(--header-hamburguer-open); /* Define a cor de fundo do menu expandido usando a variável CSS --header-hamburguer-open */
+    transition: all .5s; /* Aplica uma transição suave de 0,5 segundos para todas as propriedades CSS que mudarem */
+    position: fixed; /* Posiciona o menu fixo em relação à janela do navegador */
+    margin-left: 87px; /* Adiciona uma margem esquerda de 87px ao menu */
+    left: -100%; /* Inicialmente, posiciona o menu fora da tela, à esquerda */
+    width: 100%; /* Define a largura do menu para ocupar 100% da tela */
+    top: 79px; /* Posiciona o menu 79px abaixo do topo da tela */
+  }
+
+  #navbar-items a:not(:last-child) {
+    margin-right: 15px; /* Reduz a margem à direita dos links de navegação para 15px quando a tela é menor que 750px */
+  }
+  
+  #check:checked ~ #navbar-items {
+    left: 0; /* Quando o checkbox #check está marcado, move o menu para a posição inicial (esquerda 0), tornando-o visível */
+  }
+}
+
+@media (max-width: 600px) {
+
+  #navbar-items a:first-child {
+    margin-left: 15px; /* Reduz a margem à esquerda do primeiro link de navegação para 15px em telas com largura de 600px ou menos */
+  }
+}
+
+@media (max-height: 850px) {
+
+  #navbar-items {
+    top: 85px; /* Ajusta a posição do menu para 85px abaixo do topo da tela quando a altura da tela é de 850px ou menos */
+  }
+}
+
+@media (max-height: 750px) {
+
+  #navbar-items {
+    top: 75px; /* Ajusta a posição do menu para 75px abaixo do topo da tela quando a altura da tela é de 750px ou menos */
+  }
+}
+
+@media (max-height: 580px) {
+
+  #navbar-items {
+    top: 60px; /* Ajusta a posição do menu para 60px abaixo do topo da tela quando a altura da tela é de 580px ou menos */
+  }
+}
+
+
+
+/* Home ------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* INÍCIO - Definindo tamanho e posição da home  -------------------------------- */
+#home-container {
+  justify-content: center; /* Alinha horizontalmente o conteúdo dentro de #home-container ao centro */
+  align-items: center; /* Alinha verticalmente o conteúdo dentro de #home-container ao centro */
+  position: relative; /* Define a posição relativa do contêiner, permitindo que elementos posicionados dentro dele possam ser ajustados em relação a ele */
+  overflow: hidden; /* Oculta qualquer conteúdo que transborde do contêiner */
+  display: flex; /* Usa um layout flexível para o contêiner, permitindo que seus itens sejam alinhados e distribuídos conforme as regras acima */
+  height: 70vh; /* Define a altura do contêiner como 70% da altura da viewport (altura da janela do navegador) */
+  width: 100vw; /* Define a largura do contêiner como 100% da largura da viewport */
+}
+
+#home {
+  margin-top: 10%; /* Adiciona uma margem superior de 10% da altura da viewport ao elemento #home, empurrando-o para baixo */
+  height: 50%; /* Define a altura do elemento #home como 50% da altura do contêiner pai (#home-container) */
+  width: 50%; /* Define a largura do elemento #home como 50% da largura do contêiner pai (#home-container) */
+  z-index: 1; /* Define a ordem de empilhamento do elemento #home, garantindo que ele fique acima de outros elementos com z-index menor */
+}
+/* FIM - Definindo tamanho e posição da home  ----------------------------------- */
+
+
+
+/* INÍCIO - Efeitos do vídeo da home -------------------------------------------- */
+.home-video-content video:hover {
+  transform: scale(1.5); /* Amplia o vídeo para 150% do seu tamanho original quando o mouse passa sobre ele, criando um efeito de zoom */
+}
+
+.home-video-content video {
+  filter: grayscale(50%) brightness(30%); /* Aplica um filtro ao vídeo que reduz a saturação para 50% (preto e branco) e diminui o brilho para 30% */
+  background: var(--main-video-color); /* Define a cor de fundo do vídeo usando a variável CSS --main-video-color */
+  transition: transform 10s ease-out; /* Aplica uma transição suave de 10 segundos para mudanças na transformação do vídeo (como o efeito de zoom) */
+  position: absolute; /* Posiciona o vídeo de forma absoluta em relação ao contêiner pai mais próximo com posição relativa */
+  object-fit: cover; /* Faz com que o vídeo cubra todo o contêiner, preservando a proporção e cortando o excesso se necessário */
+  height: 100%; /* Define a altura do vídeo para 100% da altura do contêiner pai */
+  width: 100%; /* Define a largura do vídeo para 100% da largura do contêiner pai */
+  z-index: -1; /* Define a ordem de empilhamento do vídeo para um valor negativo, colocando-o atrás de outros elementos com z-index maior */
+  left: 0; /* Posiciona o vídeo 0px à esquerda do contêiner pai */
+  top: 0; /* Posiciona o vídeo 0px abaixo do topo do contêiner pai */
+}
+/* FIM - Efeitos do vídeo da home ----------------------------------------------- */
+
+
+
+/* INÍCIO - Definindo estilo do texto da home ----------------------------------- */
+.home-text-content:hover {
+  transform: translateY(5px); /* Move o contêiner de texto para baixo em 5px quando o mouse passa sobre ele, criando um efeito de "deslocamento" */
+}
+
+.home-text-content h1 {
+  color: var(--main-primary-letter); /* Define a cor do texto dentro do h1 usando a variável CSS --main-primary-letter */
+  text-transform: none; /* Não altera a capitalização do texto, preservando o formato original */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px ao h1, criando espaço abaixo do título */
+  text-align: center; /* Centraliza o texto do h1 horizontalmente dentro do contêiner */
+  font-size: 3.0rem; /* Define o tamanho da fonte do h1 como 3.0rem */
+}
+
+.home-text-content p {
+  color: var(--main-secondary-letter); /* Define a cor do texto dentro do parágrafo (p) usando a variável CSS --main-secondary-letter */
+  font-family: 'Poppins', sans-serif; /* Define a fonte do texto dentro do parágrafo como 'Poppins', com 'sans-serif' como fonte de reserva */
+  text-transform: none; /* Não altera a capitalização do texto, preservando o formato original */
+  text-align: center; /* Centraliza o texto do parágrafo horizontalmente dentro do contêiner */
+  font-size: 1.5rem; /* Define o tamanho da fonte do parágrafo como 1.5rem */
+}
+/* FIM - Definindo estilo do texto da home -------------------------------------- */
+
+
+
+/* INÍCIO - Estilo do botão da home --------------------------------------------- */
+.home-button-container:hover {
+  transform: translateY(5px); /* Move o contêiner do botão para baixo em 5px quando o mouse passa sobre ele, criando um efeito de "pressionar" */
+}
+
+.home-button-container {
+  transition: 0.3s ease-out; /* Aplica uma transição suave de 0,3 segundos para mudanças de estilo no contêiner do botão */
+  align-items: center; /* Alinha verticalmente o conteúdo dentro do contêiner do botão ao centro */
+  position: absolute; /* Posiciona o contêiner do botão de forma absoluta em relação ao contêiner pai mais próximo com posição relativa */
+  display: flex; /* Exibe os itens dentro do contêiner do botão em um layout flexível */
+  bottom: 50px; /* Posiciona o contêiner do botão a 50px do fundo do contêiner pai */
+  right: 9vw; /* Posiciona o contêiner do botão a 9% da largura da viewport a partir da borda direita */
+}
+
+.button-text {
+  color: var(--main-primary-letter); /* Define a cor do texto dentro do botão usando a variável CSS --main-primary-letter */
+  font-family: 'Poppins', sans-serif; /* Define a fonte do texto dentro do botão como 'Poppins', com 'sans-serif' como fonte de reserva */
+  text-transform: none; /* Não altera a capitalização do texto dentro do botão */
+  margin-right: 10px; /* Adiciona uma margem à direita do texto dentro do botão de 10px */
+}
+
+.button:hover {
+  background: var(--main-button-hover); /* Altera a cor de fundo do botão para a cor definida na variável CSS --main-button-hover ao passar o mouse sobre ele */
+  transform: rotate(0deg); /* Define a rotação do botão para 0 graus ao passar o mouse, removendo qualquer rotação aplicada anteriormente */
+}
+
+.button {
+  background: var(--main-button-color); /* Define a cor de fundo do botão usando a variável CSS --main-button-color */
+  color: var(--main-primary-letter); /* Define a cor do texto dentro do botão usando a variável CSS --main-primary-letter */
+  transform: rotate(90deg); /* Rotaciona o botão em 90 graus no sentido horário */
+  justify-content: center; /* Alinha horizontalmente o conteúdo dentro do botão ao centro */
+  align-items: center; /* Alinha verticalmente o conteúdo dentro do botão ao centro */
+  border-radius: 50%; /* Torna o botão redondo com bordas arredondadas de 50% do seu tamanho total */
+  display: flex; /* Exibe o conteúdo dentro do botão em um layout flexível */
+  height: 50px; /* Define a altura do botão para 50px */
+  width: 50px; /* Define a largura do botão para 50px */
+}
+
+.button i {
+  transition: transform 0.3s ease; /* Aplica uma transição suave de 0,3 segundos para mudanças na transformação do ícone dentro do botão */
+}
+/* FIM - Estilo do botão da home ------------------------------------------------ */
+
+
+
+/* Características ------------------------------------------------------------------------------------------------------------------------------- */
+
+#features-container {
+  color: var(--main-primary-letter); /* Define a cor do texto dentro do contêiner de características usando a variável CSS --main-primary-letter */
+  background: var(--main-features); /* Define a cor de fundo do contêiner de características usando a variável CSS --main-features */
+  padding: 3vh; /* Adiciona um preenchimento interno de 3% da altura da viewport ao contêiner */
+  width: 100%; /* Define a largura do contêiner de características para 100% da largura do contêiner pai */
+}
+
+#features {
+  justify-content: space-between; /* Distribui os itens dentro do contêiner de características igualmente, com o máximo de espaço possível entre eles */
+  display: flex; /* Usa um layout flexível para o contêiner de características */
+  margin: auto; /* Centraliza horizontalmente o contêiner de características dentro do contêiner pai */
+  width: 100%; /* Define a largura do contêiner de características para 100% da largura do contêiner pai */
+  gap: 50px; /* Adiciona um espaçamento de 50px entre os itens dentro do contêiner de características */
+}
+
+.feature-box:hover {
+  transform: translateY(5px); /* Move a caixa de características para baixo em 5px quando o mouse passa sobre ela, criando um efeito de "deslocamento" */
+}
+
+.feature-box {
+  background: var(--main-feature-box); /* Define a cor de fundo da caixa de características usando a variável CSS --main-feature-box */
+  flex-direction: column; /* Alinha os itens dentro da caixa de características em uma coluna */
+  border-radius: 5px; /* Arredonda os cantos da caixa de características com um raio de 5px */
+  display: flex; /* Usa um layout flexível para a caixa de características */
+  padding: 20px; /* Adiciona um preenchimento interno de 20px à caixa de características */
+}
+
+.feature-box i {
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px ao ícone dentro da caixa de características */
+}
+
+.feature-box span {
+  text-transform: none; /* Não altera a capitalização do texto dentro do span, preservando o formato original */
+  margin-bottom: 5px; /* Adiciona uma margem inferior de 5px ao texto dentro do span */
+  font-size: 1.5rem; /* Define o tamanho da fonte do texto dentro do span como 1.5rem */
+  font-weight: bold; /* Define o peso da fonte do texto dentro do span como negrito */
+}
+
+.feature-box p {
+  color: var(--main-secondary-letter); /* Define a cor do texto dentro do parágrafo usando a variável CSS --main-secondary-letter */
+  font-family: 'Poppins', sans-serif; /* Define a fonte do texto dentro do parágrafo como 'Poppins', com 'sans-serif' como fonte de reserva */
+  text-transform: none; /* Não altera a capitalização do texto dentro do parágrafo, preservando o formato original */
+  font-size: 1.2rem; /* Define o tamanho da fonte do texto dentro do parágrafo como 1.2rem */
+}
+
+
+
+/* Razão ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+#reason-container {
+  background: var(--main-about); /* Define a cor de fundo do contêiner de razão usando a variável CSS --main-about */
+  padding: 3vh; /* Adiciona um preenchimento interno de 3% da altura da viewport ao contêiner */
+}
+
+#reason {
+  justify-content: center; /* Alinha horizontalmente o conteúdo dentro do contêiner de razão ao centro */
+  align-items: center; /* Alinha verticalmente o conteúdo dentro do contêiner de razão ao centro */
+  display: flex; /* Usa um layout flexível para o contêiner de razão */
+  height: 100%; /* Define a altura do contêiner de razão para 100% da altura do contêiner pai */
+  width: 100%; /* Define a largura do contêiner de razão para 100% da largura do contêiner pai */
+}
+
+.reason-text-content:hover {
+  transform: translateY(5px); /* Move o contêiner de texto para baixo em 5px quando o mouse passa sobre ele, criando um efeito de "deslocamento" */
+}
+
+.reason-text-content {
+  text-align: center; /* Centraliza o texto dentro do contêiner de texto de razão */
+  max-width: 800px; /* Define a largura máxima do contêiner de texto de razão como 800px */
+}
+
+.reason-text-content h2 {
+  color: var(--main-primary-letter); /* Define a cor do texto do h2 usando a variável CSS --main-primary-letter */
+  text-transform: none; /* Não altera a capitalização do texto, preservando o formato original */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px ao h2 */
+  font-size: 1.8rem; /* Define o tamanho da fonte do h2 como 1.8rem */
+}
+
+.reason-text-content p {
+  color: var(--main-secondary-letter); /* Define a cor do texto do parágrafo usando a variável CSS --main-secondary-letter */
+  font-family: 'Poppins', sans-serif; /* Define a fonte do texto do parágrafo como 'Poppins', com 'sans-serif' como fonte de reserva */
+  text-transform: none; /* Não altera a capitalização do texto, preservando o formato original */
+  text-align: justify; /* Justifica o texto do parágrafo, alinhando-o igualmente entre as margens esquerda e direita */
+  font-size: 1.4rem; /* Define o tamanho da fonte do parágrafo como 1.4rem */
+  line-height: 1.5; /* Define a altura da linha do texto do parágrafo como 1.5 vezes o tamanho da fonte, melhorando a legibilidade */
+}
+
+
+
+/* Recursos -------------------------------------------------------------------------------------------------------------------------------------- */
+
+#resources-container {
+  background: var(--main-resources); /* Define a cor de fundo do contêiner de recursos usando a variável CSS --main-resources */
+  padding-bottom: 3vh; /* Adiciona um preenchimento interno de 3% da altura da viewport na parte inferior do contêiner */
+  padding-top: 3vh; /* Adiciona um preenchimento interno de 3% da altura da viewport na parte superior do contêiner */
+}
+  
+#resources {
+  justify-content: space-around; /* Distribui os itens dentro do contêiner de recursos com espaçamento igual ao redor */
+  flex-wrap: wrap; /* Permite que os itens dentro do contêiner de recursos se movam para a linha seguinte se não houver espaço suficiente */
+  display: flex; /* Usa um layout flexível para o contêiner de recursos */
+}
+
+.resources-text-content:hover {
+  transform: translateY(5px); /* Move o contêiner de texto para baixo em 5px quando o mouse passa sobre ele, criando um efeito de "deslocamento" */
+}
+
+.resources-text-content {
+  align-items: top; /* Alinha os itens ao topo dentro do contêiner de texto de recursos */
+  flex-basis: 50%; /* Define a base flexível para cada contêiner de texto de recursos como 50% da largura disponível */
+}
+  
+.resources-text-content h2 {
+  color: var(--main-primary-letter); /* Define a cor do texto do h2 usando a variável CSS --main-primary-letter */
+  text-transform: none; /* Não altera a capitalização do texto, preservando o formato original */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px ao h2 */
+  font-size: 1.8rem; /* Define o tamanho da fonte do h2 como 1.8rem */
+}
+  
+.resources-text-content p {
+  color: var(--main-secondary-letter); /* Define a cor do texto do parágrafo usando a variável CSS --main-secondary-letter */
+  font-family: 'Poppins', sans-serif; /* Define a fonte do texto do parágrafo como 'Poppins', com 'sans-serif' como fonte de reserva */
+  text-transform: none; /* Não altera a capitalização do texto, preservando o formato original */
+  text-align: justify; /* Justifica o texto do parágrafo, alinhando-o igualmente entre as margens esquerda e direita */
+  font-size: 1.4rem; /* Define o tamanho da fonte do parágrafo como 1.4rem */
+}
+
+.resources-media-content {
+  justify-content: center; /* Centraliza horizontalmente o conteúdo dentro do contêiner de mídia de recursos */
+  align-items: flex-start; /* Alinha os itens ao início do contêiner de mídia de recursos */
+  flex-wrap: wrap; /* Permite que os itens dentro do contêiner de mídia de recursos se movam para a linha seguinte se não houver espaço suficiente */
+  display: flex; /* Usa um layout flexível para o contêiner de mídia de recursos */
+}
+  
+.resources-media-content img {
+  filter: brightness(50%); /* Aplica um filtro de brilho de 50% às imagens dentro do contêiner de mídia de recursos */
+  border-radius: 5px; /* Arredonda os cantos das imagens com um raio de 5px */
+  max-width: 300px; /* Define a largura máxima das imagens para 300px */
+  display: block; /* Faz com que as imagens sejam exibidas como blocos, removendo qualquer espaço abaixo delas */
+  width: 100%; /* Define a largura das imagens para 100% do contêiner pai */
+}
+
+.resources-media-content img:hover {
+  transform: translateY(5px); /* Move a imagem para baixo em 5px quando o mouse passa sobre ela, criando um efeito de "deslocamento" */
+}
+
+
+
+/* Sobre ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+#about-container {
+  background: var(--main-about); /* Define a cor de fundo do contêiner "Sobre" usando a variável CSS --main-about */
+  padding: 3vh; /* Adiciona um preenchimento interno de 3% da altura da viewport ao contêiner */
+}
+
+#about {
+  justify-content: center; /* Alinha horizontalmente o conteúdo dentro do contêiner "Sobre" ao centro */
+  align-items: center; /* Alinha verticalmente o conteúdo dentro do contêiner "Sobre" ao centro */
+  display: flex; /* Usa um layout flexível para o contêiner "Sobre" */
+  height: 100%; /* Define a altura do contêiner "Sobre" para 100% da altura do contêiner pai */
+  width: 100%; /* Define a largura do contêiner "Sobre" para 100% da largura do contêiner pai */
+}
+
+.about-text-content:hover {
+  transform: translateY(5px); /* Move o contêiner de texto para baixo em 5px quando o mouse passa sobre ele, criando um efeito de "deslocamento" */
+}
+
+.about-text-content {
+  text-align: center; /* Centraliza o texto dentro do contêiner de texto "Sobre" */
+  max-width: 800px; /* Define a largura máxima do contêiner de texto "Sobre" como 800px */
+}
+
+.about-text-content h2 {
+  color: var(--main-primary-letter); /* Define a cor do texto do h2 usando a variável CSS --main-primary-letter */
+  text-transform: none; /* Não altera a capitalização do texto, preservando o formato original */
+  margin-bottom: 10px; /* Adiciona uma margem inferior de 10px ao h2 */
+  font-size: 1.8rem; /* Define o tamanho da fonte do h2 como 1.8rem */
+}
+
+.about-text-content p {
+  color: var(--main-secondary-letter); /* Define a cor do texto do parágrafo usando a variável CSS --main-secondary-letter */
+  font-family: 'Poppins', sans-serif; /* Define a fonte do texto do parágrafo como 'Poppins', com 'sans-serif' como fonte de reserva */
+  text-transform: none; /* Não altera a capitalização do texto, preservando o formato original */
+  text-align: justify; /* Justifica o texto do parágrafo, alinhando-o igualmente entre as margens esquerda e direita */
+  font-size: 1.4rem; /* Define o tamanho da fonte do parágrafo como 1.4rem */
+  line-height: 1.5; /* Define a altura da linha do texto do parágrafo como 1.5 vezes o tamanho da fonte, melhorando a legibilidade */
+}
+
+
+
+/* Rodapé ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* INÍCIO - Contato ------------------------------------------------------------- */
+#contact-container {
+  background: var(--footer-contact); /* Define a cor de fundo do contêiner de contato usando a variável CSS --footer-contact */
+  padding: 3vh; /* Adiciona um preenchimento interno de 3% da altura da viewport ao contêiner */
+}
+
+#contact {
+  justify-content: center; /* Alinha horizontalmente o conteúdo dentro da seção de contato ao centro */
+  align-items: center; /* Alinha verticalmente o conteúdo dentro da seção de contato ao centro */
+  display: flex; /* Usa um layout flexível para a seção de contato */
+}
+
+#contact a:hover {
+  background: var(--footer-button-hover); /* Define a cor de fundo dos links na seção de contato quando o mouse passa sobre eles, usando a variável CSS --footer-button-hover */
+  transform: translateY(5px); /* Move o link para baixo em 5px quando o mouse passa sobre ele, criando um efeito de "deslocamento" */
+}
+
+#contact a {
+  background: var(--footer-button-color); /* Define a cor de fundo dos links na seção de contato usando a variável CSS --footer-button-color */
+  color: var(--footer-primary-letter); /* Define a cor do texto dos links na seção de contato usando a variável CSS --footer-primary-letter */
+  justify-content: center; /* Alinha horizontalmente o conteúdo dos links ao centro */
+  display: inline-flex; /* Usa um layout flexível inline para os links */
+  align-items: center; /* Alinha verticalmente o conteúdo dos links ao centro */
+  border-radius: 50%; /* Arredonda os cantos dos links, criando uma forma circular */
+  font-size: 2rem; /* Define o tamanho da fonte dos links para 2rem */
+  margin: 1rem; /* Adiciona uma margem de 1rem ao redor dos links */
+  height: 5rem; /* Define a altura dos links para 5rem */
+  width: 5rem; /* Define a largura dos links para 5rem */
+}
+/* FIM - Contato ---------------------------------------------------------------- */
+
+
+
+/* ÍNÍCIO - Barra de Navegação Inferior ----------------------------------------- */
+#under-navbar-container {
+  background: var(--footer-navbar); /* Define a cor de fundo do contêiner da barra de navegação inferior usando a variável CSS --footer-navbar */
+}
+
+#under-navbar {
+  justify-content: center; /* Alinha horizontalmente o conteúdo dentro da barra de navegação inferior ao centro */
+  align-items: center; /* Alinha verticalmente o conteúdo dentro da barra de navegação inferior ao centro */
+  display: flex; /* Usa um layout flexível para a barra de navegação inferior */
+}
+
+#under-navbar-items {
+  color: var(--footer-primary-letter); /* Define a cor do texto dos itens da barra de navegação inferior usando a variável CSS --footer-primary-letter */
+  list-style: none; /* Remove os marcadores de lista dos itens da barra de navegação inferior */
+  display: flex; /* Usa um layout flexível para os itens da barra de navegação inferior */
+}
+
+#under-navbar-items a:not(:last-child) {
+  margin-right: 30px; /* Adiciona uma margem direita de 30px para todos os links dentro da barra de navegação inferior, exceto o último */
+}
+
+#under-navbar-items a:hover {
+  background: var(--footer-button-hover); /* Define a cor de fundo dos links quando o mouse passa sobre eles, usando a variável CSS --footer-button-hover */
+  transform: translateY(5px); /* Move o link para baixo em 5px quando o mouse passa sobre ele, criando um efeito de "deslocamento" */
+}
+
+a.under-inside-anchor {
+  background: var(--footer-button-color); /* Define a cor de fundo dos links com a classe .under-inside-anchor usando a variável CSS --footer-button-color */
+  color: var(--header-inside-anchor); /* Define a cor do texto dos links com a classe .under-inside-anchor usando a variável CSS --header-inside-anchor */
+  padding: .7rem 1rem; /* Adiciona um preenchimento interno de 0.7rem verticalmente e 1rem horizontalmente aos links com a classe .under-inside-anchor */
+  border-radius: 5px; /* Arredonda os cantos dos links com a classe .under-inside-anchor com um raio de 5px */
+  line-height: 30px; /* Define a altura da linha dos links com a classe .under-inside-anchor para 30px */
+  font-weight: 600; /* Define o peso da fonte dos links com a classe .under-inside-anchor como 600, tornando-os em negrito */
+  display: flex; /* Usa um layout flexível para os links com a classe .under-inside-anchor */
+}
+
+a.under-outside-anchor {
+  background: var(--footer-button-color); /* Define a cor de fundo dos links com a classe .under-outside-anchor usando a variável CSS --footer-button-color */
+  color: var(--header-outside-anchor); /* Define a cor do texto dos links com a classe .under-outside-anchor usando a variável CSS --header-outside-anchor */
+  padding: .7rem 1rem; /* Adiciona um preenchimento interno de 0.7rem verticalmente e 1rem horizontalmente aos links com a classe .under-outside-anchor */
+  border-radius: 10px; /* Arredonda os cantos dos links com a classe .under-outside-anchor com um raio de 10px */
+  line-height: 30px; /* Define a altura da linha dos links com a classe .under-outside-anchor para 30px */
+  font-weight: 600; /* Define o peso da fonte dos links com a classe .under-outside-anchor como 600, tornando-os em negrito */
+  display: flex; /* Usa um layout flexível para os links com a classe .under-outside-anchor */
+}
+/* FIM - Barra de Navegação Inferior -------------------------------------------- */
+
+
+
+/* INÍCIO - Créditos ------------------------------------------------------------ */
+#created-by-container {
+  background: var(--footer-created); /* Define a cor de fundo do contêiner de créditos usando a variável CSS --footer-created */
+  padding: 3vh; /* Adiciona um preenchimento interno de 3% da altura da viewport ao contêiner */
+}
+
+#created-by:hover {
+  transform: translateY(5px); /* Move o contêiner de créditos para baixo em 5px quando o mouse passa sobre ele, criando um efeito de "deslocamento" */
+}
+
+#created-by {
+  transition: 0.3s ease-out; /* Define uma transição suave de 0.3 segundos para propriedades animadas dentro do contêiner de créditos */
+  justify-content: center; /* Alinha horizontalmente o conteúdo dentro do contêiner de créditos ao centro */
+  align-items: center; /* Alinha verticalmente o conteúdo dentro do contêiner de créditos ao centro */
+  display: flex; /* Usa um layout flexível para o contêiner de créditos */
+  width: 100vw; /* Define a largura do contêiner de créditos para 100% da largura da viewport */
+  height: 7vh; /* Define a altura do contêiner de créditos para 7% da altura da viewport */
+}
+
+#created-by p {
+  font-size: 1.5rem; /* Define o tamanho da fonte do parágrafo dentro do contêiner de créditos como 1.5rem */
+  color: var(--footer-secondary-letter); /* Define a cor do texto do parágrafo usando a variável CSS --footer-secondary-letter */
+  font-family: 'Poppins', sans-serif; /* Define a fonte do texto do parágrafo como 'Poppins', com 'sans-serif' como fonte de reserva */
+}
+
+#created-by span {
+  color: var(--footer-primary-letter); /* Define a cor do texto do span usando a variável CSS --footer-primary-letter */
+  font-family: 'Montserrat', sans-serif; /* Define a fonte do texto do span como 'Montserrat', com 'sans-serif' como fonte de reserva */
+  font-weight: 600; /* Define o peso da fonte do texto do span como 600, tornando-o em negrito */
+  font-size: 1.6rem; /* Define o tamanho da fonte do span como 1.6rem */
+}
+/* FIM - Créditos --------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* @Media Largura -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Aplica estilos quando a largura da viewport é no máximo 1750px */
+@media (max-width: 1750px) {
+
+  #home {
+    width: 60%; /* Define a largura do elemento #home para 60% da largura da viewport */
+  }
+
+  #navbar {
+    width: 84%; /* Define a largura do elemento #navbar para 84% da largura da viewport */
+  }
+}
+
+/* Aplica estilos quando a largura da viewport é no máximo 1400px */
+@media (max-width: 1400px) {
+
+  #home {
+    width: 70%; /* Define a largura do elemento #home para 70% da largura da viewport */
+  }
+
+  #features {
+    gap: 35px; /* Define o espaço entre os itens no elemento #features para 35px */
+  }
+
+  a {
+    font-size: 100%; /* Define o tamanho da fonte dos links para 100% */
+  }
+
+  #home {
+    margin-top: 5%; /* Define a margem superior do elemento #home para 5% da altura da viewport */
+    height: 30%; /* Define a altura do elemento #home para 30% da altura da viewport */
+    width: 70%; /* Define a largura do elemento #home para 70% da largura da viewport */
+  }
+
+  #navbar {
+    width: 87%; /* Define a largura do elemento #navbar para 87% da largura da viewport */
+  }
+
+  .home-button-container {
+    position: absolute; /* Define a posição do elemento .home-button-container como absoluta */
+    left: 81vw; /* Define a distância da borda esquerda da viewport para o elemento .home-button-container como 81% da largura da viewport */
+  }
+
+  .button {
+    min-height: 50px; /* Define a altura mínima dos botões para 50px */
+    min-width: 50px; /* Define a largura mínima dos botões para 50px */
+  }
+}
+
+/* Aplica estilos quando a largura da viewport é no máximo 1200px */
+@media (max-width: 1200px) {
+
+  #navbar {
+    width: 89%; /* Define a largura do elemento #navbar para 89% da largura da viewport */
+  }
+
+  html {
+    font-size: 70%; /* Define o tamanho da fonte do elemento html para 70% */
+  }
+
+  a {
+    font-size: 100%; /* Define o tamanho da fonte dos links para 100% */
+  }
+}
+
+/* Aplica estilos quando a largura da viewport é no máximo 1100px */
+@media (max-width: 1100px) {
+
+  .home-button-container {
+    position: absolute; /* Define a posição do elemento .home-button-container como absoluta */
+    left: 80vw; /* Define a distância da borda esquerda da viewport para o elemento .home-button-container como 80% da largura da viewport */
+  }
+
+  #features {
+    gap: 25px; /* Define o espaço entre os itens no elemento #features para 25px */
+  }
+}
+
+/* Aplica estilos quando a largura da viewport é no máximo 1000px */
+@media (max-width: 1000px) {
+
+  .home-button-container {
+    position: absolute; /* Define a posição do elemento .home-button-container como absoluta */
+    left: 78vw; /* Define a distância da borda esquerda da viewport para o elemento .home-button-container como 78% da largura da viewport */
+  }
+
+  #navbar-items a {
+    font-size: 80%; /* Define o tamanho da fonte dos links no elemento #navbar-items para 80% */
+  }
+}
+
+/* Aplica estilos quando a largura da viewport é no máximo 900px */
+@media (max-width: 900px) {
+
+  .home-button-container {
+    display: none; /* Oculta o elemento .home-button-container */
+  }
+
+  #home {
+    width: 88%; /* Define a largura do elemento #home para 88% da largura da viewport */
+  }
+}
+
+/* Aplica estilos quando a largura da viewport é no máximo 800px */
+@media (max-width: 800px) {
+
+  #navbar img {
+    width: 60px; /* Define a largura das imagens dentro do #navbar para 60px */
+  }
+
+  html {
+    font-size: 60%; /* Define o tamanho da fonte do elemento html para 60% */
+  }
+
+  a {
+    font-size: 100%; /* Define o tamanho da fonte dos links para 100% */
+  }
+}
+
+/* Aplica estilos quando a largura da viewport é no máximo 700px */
+@media (max-width: 700px) {
+
+  .home-button-container {
+    position: absolute; /* Define a posição do elemento .home-button-container como absoluta */
+    left: 82vw; /* Define a distância da borda esquerda da viewport para o elemento .home-button-container como 82% da largura da viewport */
+  }
+
+  .button {
+    max-height: 40px; /* Define a altura máxima dos botões para 40px */
+    min-height: 40px; /* Define a altura mínima dos botões para 40px */
+    min-width: 40px; /* Define a largura mínima dos botões para 40px */
+    max-width: 40px; /* Define a largura máxima dos botões para 40px */
+  }
+}
+
+/* Aplica estilos quando a largura da viewport é no máximo 550px */
+@media (max-width: 550px) {
+
+  #features-container {
+    padding: 2vh; /* Define o preenchimento interno do elemento #features-container para 2% da altura da viewport */
+  }
+
+  .feature-box {
+    padding: 10px; /* Define o preenchimento interno dos elementos .feature-box para 10px */
+  }
+
+  #under-navbar-items a:not(:last-child) {
+    margin-right: 15px; /* Define a margem direita dos links no #under-navbar-items, exceto o último, para 15px */
+  }
+
+  #features {
+    gap: 12px; /* Define o espaço entre os itens no elemento #features para 12px */
+  }
+}
+
+/* Aplica estilos quando a largura da viewport é no máximo 500px */
+@media (max-width: 500px) {
+
+  #home-container {
+    height: 40vh; /* Define a altura do elemento #home-container para 40% da altura da viewport */
+  }
+
+  #home {
+    height: 20%; /* Define a altura do elemento #home para 20% da altura da viewport */
+  }
+
+  .home-text-content p {
+    display: none; /* Oculta os parágrafos dentro do elemento .home-text-content */
+  }
+}
+
+
+
+
+
+
+
+
+  
+
+/* @Media Altura --------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Aplica estilos quando a altura da viewport é no máximo 900px */
+@media (max-height: 900px) {
+
+  #home {
+    margin-top: 5%; /* Define a margem superior do elemento #home para 5% da altura da viewport */
+  }
+  
+  #navbar img {
+    width: 70px; /* Define a largura das imagens dentro do #navbar para 70px */
+  }
+}
+
+/* Aplica estilos quando a altura da viewport é no máximo 850px */
+@media (max-height: 850px) {
+  
+  #navbar img {
+    width: 60px; /* Define a largura das imagens dentro do #navbar para 60px */
+  }
+  
+  #navbar-container {
+    height: 15vh; /* Define a altura do elemento #navbar-container para 15% da altura da viewport */
+  }
+}
+
+/* Aplica estilos quando a altura da viewport é no máximo 750px */
+@media (max-height: 750px) {
+  
+  #home {
+    margin-top: 2%; /* Define a margem superior do elemento #home para 2% da altura da viewport */
+  }
+  
+  .home-button-container {
+    bottom: 35px; /* Define a distância da borda inferior da viewport para o elemento .home-button-container como 35px */
+  }
+}
+
+/* Aplica estilos quando a altura da viewport é no máximo 650px */
+@media (max-height: 650px) {
+  
+  #navbar-container {
+    height: 17vh; /* Define a altura do elemento #navbar-container para 17% da altura da viewport */
+  }
+  
+  .home-button-container {
+    bottom: 15px; /* Define a distância da borda inferior da viewport para o elemento .home-button-container como 15px */
+  }
+}
+
+/* Aplica estilos quando a altura da viewport é no máximo 600px */
+@media (max-height: 600px) {
+  
+  .home-button-container {
+    display: none; /* Oculta o elemento .home-button-container */
+  }
+}
+
+/* Aplica estilos quando a altura da viewport é no máximo 550px */
+@media (max-height: 550px) {
+  
+  .home-text-content p {
+    display: none; /* Oculta os parágrafos dentro do elemento .home-text-content */
+  }
+  
+  #home {
+    margin-top: 12%; /* Define a margem superior do elemento #home para 12% da altura da viewport */
+  }
+}
+
+/* Aplica estilos quando a altura da viewport é no máximo 525px */
+@media (max-height: 525px) {
+  
+  #navbar-container {
+    height: 20vh; /* Define a altura do elemento #navbar-container para 20% da altura da viewport */
+  }
+}
