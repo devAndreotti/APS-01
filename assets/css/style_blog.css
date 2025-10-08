@@ -67,93 +67,93 @@
 /* Cursor --------------------------------------------------------------------------------------------------------------- */
 
 * {
-  cursor: none !important;
+  cursor: none !important; /* Remove o cursor padrão em toda a página */
 }
 
 .cursor {
-  position: fixed;
-  top: -10px;
-  left: -10px;
-  width: 15px;
-  height: 15px;
-  border: 2px solid var(--cursor-color);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transition: width 0.4s, height 0.4s, transform 0.4s;
-  transform: translate(-50%, -50%) rotate(45deg);
-  border-radius: 4px;
-  background-color: transparent;
-  mix-blend-mode: difference ;
-  animation: spin 2s linear infinite;
+  position: fixed; /* Posiciona o cursor customizado de forma fixa na tela */
+  top: -10px; /* Define a posição do cursor para que fique centralizado com o ponteiro do mouse */
+  left: -10px; /* Define a posição do cursor para que fique centralizado com o ponteiro do mouse */
+  width: 15px; /* Define a largura inicial do cursor customizado */
+  height: 15px; /* Define a altura inicial do cursor customizado */
+  border: 2px solid var(--cursor-color); /* Define a cor da borda do cursor usando uma variável CSS */
+  border-radius: 50%; /* Faz o cursor ser circular */
+  pointer-events: none; /* Impede que o cursor interfira em qualquer evento de clique ou interação */
+  z-index: 9999; /* Garante que o cursor fique acima de todos os outros elementos na página */
+  transition: width 0.4s, height 0.4s, transform 0.4s; /* Define transições suaves ao alterar o tamanho e a rotação do cursor */
+  transform: translate(-50%, -50%) rotate(45deg); /* Centraliza o cursor em relação à sua posição e o rotaciona em 45 graus */
+  border-radius: 4px; /* Redefine o raio da borda para 4px (um quadrado com cantos arredondados) */
+  background-color: transparent; /* Define a cor de fundo como transparente */
+  mix-blend-mode: difference; /* Altera a cor do cursor de acordo com o fundo, criando um contraste */
+  animation: spin 2s linear infinite; /* Aplica uma animação de rotação contínua ao cursor */
 }
 
 @keyframes spin {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg); /* Define o estado inicial da animação sem rotação */
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg); /* Define o estado final da animação com rotação completa (360 graus) */
   }
 }
 
-.cursor.hovered {
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
-  transform: translate(-50%, -50%) rotate(90deg);
-  background: var(--cursor-color);
+.cursor.hovered { 
+  width: 20px; /* Aumenta a largura do cursor ao interagir com um elemento que tem a classe 'hovered' */
+  height: 20px; /* Aumenta a altura do cursor ao interagir com um elemento que tem a classe 'hovered' */
+  border-radius: 4px; /* Mantém os cantos do cursor ligeiramente arredondados */
+  transform: translate(-50%, -50%) rotate(90deg); /* Rotaciona o cursor em 90 graus ao interagir com um elemento que tem a classe 'hovered' */
+  background: var(--cursor-color); /* Define a cor de fundo do cursor ao interagir com um elemento que tem a classe 'hovered' */
 }
 
 .cursor-container.cursor-disabled .cursor {
-  display: none;
+  display: none; /* Oculta o cursor completamente quando um elemento tem a classe 'cursor-disabled' */
 }
 
 
 
 /* Barra de Rolagem ----------------------------------------------------------------------------------------------------- */
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--scroll-bar-hover);
+::-webkit-scrollbar-thumb:hover { /* webkit é o motor de renderização que alimenta vários navegadores, e o uso de -webkit- no CSS permite aplicar estilos específicos para esses navegadores (aqui usados para mudar a cor e tamanho)*/
+  background: var(--scroll-bar-hover); /* Altera a cor da barra de rolagem (a parte que o usuário pode arrastar) ao passar o mouse sobre ele, usando uma variável CSS para definir a cor */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--scroll-bar-thumb);
+  background: var(--scroll-bar-thumb); /* Define a cor padrão quando a barra de rolagem não está sendo arrastada */
 }
 
 ::-webkit-scrollbar {
-  background: var(--scroll-bar-color);
-  width: 0.60rem;
+  background: var(--scroll-bar-color); /* Define a cor de fundo da barra de rolagem (a trilha da barra) usando uma variável CSS */
+  width: 0.60rem; /* Define a largura da barra de rolagem para 0.60rem */
 }
 
 
 
 /* Base ----------------------------------------------------------------------------------------------------------------- */
 
-* {
-  font-family: 'Montserrat', sans-serif;
-  outline: none; border: none;
-  text-transform: capitalize;
-  box-sizing: border-box;
-  text-decoration: none;
-  margin: 0; padding: 0;
-  font-size: 1.4rem;
+* { /* Reset de estilos */
+  font-family: 'Montserrat', sans-serif; /* Define a fonte padrão como 'Montserrat' para todos os elementos, com 'sans-serif' como fonte de reserva */
+  outline: none; border: none; /* Remove a borda e o contorno de todos os elementos (útil para evitar o contorno padrão em botões e campos de formulário) */
+  text-transform: capitalize; /* Converte o primeiro caractere de cada palavra para maiúsculo para todos os textos */
+  box-sizing: border-box; /* Altera o modelo de caixa para incluir o padding e a borda dentro do tamanho total do elemento */
+  text-decoration: none; /* Remove sublinhados e outras decorações de texto de todos os elementos */
+  margin: 0; padding: 0; /* Remove as margens e o preenchimento padrão de todos os elementos */
+  font-size: 1.4rem; /* Define o tamanho da fonte padrão para 1.4rem (rem é uma unidade relativa ao tamanho da fonte do elemento raiz) */
 }
 
 html {
-  scroll-padding-top: 10rem;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  font-size: 80%;
+  scroll-padding-top: 10rem; /* Adiciona um espaçamento de 10rem ao topo da página quando a rolagem automática é usada, útil para evitar que o conteúdo fique encoberto por um cabeçalho fixo */
+  scroll-behavior: smooth; /* Ativa uma rolagem suave para links de âncora e rolagens programáticas */
+  overflow-x: hidden; /* Esconde qualquer conteúdo que transborde horizontalmente da página */
+  font-size: 80%; /* Reduz o tamanho da fonte base para 80% do tamanho padrão do navegador, o que influencia o tamanho relativo das fontes em rem */
 }
 
 body {
-  background: var(--body-background);
+  background: var(--body-background); /* Define a cor de fundo do corpo da página usando uma variável CSS */
 }
 
 a, img {
-  text-transform: uppercase;
-  transition: 0.3s ease-out;
+  text-transform: uppercase; /* Converte o texto de links e descrições alternativas de imagens para letras maiúsculas */
+  transition: 0.3s ease-out; /* Aplica uma transição suave de 0,3 segundos para mudanças de estilo em links e imagens (como cor, tamanho, etc.) */
 }
 
 
@@ -161,91 +161,91 @@ a, img {
 /* Barra de Navegação --------------------------------------------------------------------------------------------------- */
 
 #blog-navbar {
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  margin: auto;
-  height: 100%;
-  width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  justify-content: space-between; /* Espaça os itens da barra de navegação uniformemente, com o primeiro item alinhado à esquerda e o último à direita */
+  align-items: center; /* Alinha verticalmente os itens da barra de navegação ao centro */
+  display: flex; /* Define o contêiner da barra de navegação como um flexbox para facilitar o layout dos itens */
+  margin: auto; /* Centraliza a barra de navegação horizontalmente dentro do seu contêiner pai */
+  height: 100%; /* Define a altura da barra de navegação para ocupar 100% da altura do seu contêiner pai */
+  width: 100%; /* Define a largura da barra de navegação para ocupar 100% da largura do seu contêiner pai */
+  padding-left: 20px; /* Adiciona um preenchimento de 20px à esquerda da barra de navegação */
+  padding-right: 20px; /* Adiciona um preenchimento de 20px à direita da barra de navegação */
 }
 
 #blog-navbar-container {
-  box-shadow: -5px 8px 10px 5px rgba(0, 0, 0, 0.4);
-  background: var(--header-0-background);
-  text-transform: capitalize;
-  border-radius: 20px;
-  margin-right: 50px;
-  margin-left: 50px;
-  margin-top: 45px;
+  box-shadow: -5px 8px 10px 5px rgba(0, 0, 0, 0.4); /* Adiciona uma sombra ao redor do contêiner da barra de navegação para criar um efeito de profundidade */
+  background: var(--header-0-background); /* Define o fundo do contêiner da barra de navegação usando uma variável CSS */
+  text-transform: capitalize; /* Converte o primeiro caractere de cada palavra para maiúsculo no contêiner da barra de navegação */
+  border-radius: 20px; /* Adiciona cantos arredondados ao contêiner da barra de navegação com um raio de 20px */
+  margin-right: 50px; /* Adiciona uma margem de 50px à direita do contêiner da barra de navegação */
+  margin-left: 50px; /* Adiciona uma margem de 50px à esquerda do contêiner da barra de navegação */
+  margin-top: 45px; /* Adiciona uma margem de 45px ao topo do contêiner da barra de navegação */
 
 }
 
 
 
 #logo {
-  align-items: center;
-  list-style: none;
-  display: flex;
+  align-items: center; /* Alinha verticalmente o conteúdo do elemento #logo ao centro */
+  list-style: none; /* Remove o estilo de lista padrão, caso #logo seja uma lista (ul, ol ou li) */
+  display: flex; /* Exibe o conteúdo do elemento #logo em um layout flexível, permitindo o alinhamento definido anteriormente */
 }
 
 #logo img:hover {
-  transform: rotate3d(0, 1, 0, 360deg);
+  transform: rotate3d(0, 1, 0, 360deg); /* Rotaciona a imagem 360 graus ao longo do eixo Y ao passar o mouse sobre ela, criando um efeito 3D */
 }
 
 #logo img {
-  transition: transform 1s ease-out;
-  margin-right: 10px;
-  margin-top: 7px;
-  width: 80px;
+  transition: transform 1s ease-out; /* Aplica uma transição suave de 1 segundo na transformação da imagem (como rotação) */
+  margin-right: 10px; /* Adiciona uma margem à direita de 10px na imagem */
+  margin-top: 7px; /* Adiciona uma margem superior de 7px na imagem */
+  width: 80px; /* Define a largura da imagem para 80px */
 }
 
 #logo h1:hover {
-  transition: 0.3s ease-out;
-  color: var(--logo-hover);
+  transition: color 0.3s ease-out; /* Aplica uma transição suave de 0,3 segundos na mudança da cor do texto ao passar o mouse sobre o elemento h1 */
+  color: var(--logo-hover); /* Altera a cor do texto h1 para a cor definida na variável CSS --logo-hover quando o mouse passa por cima */
 }
 
 #logo h1 {
-  color: var(--header-outside-anchor);
-  transition: 0.3s ease-out;
-  font-size: 1.9rem;
-  margin-left: 5px;
-  list-style: none;
+  color: var(--header-inside-anchor); /* Define a cor padrão do texto h1 usando a variável CSS --header-inside-anchor */
+  transition: color 0.3s ease-out; /* Aplica uma transição suave de 0,3 segundos na mudança da cor do texto */
+  font-size: 1.9rem; /* Define o tamanho da fonte do texto h1 como 1.9rem */
+  margin-left: 5px; /* Adiciona uma margem à esquerda de 5px no texto h1 */
+  list-style: none; /* Remove qualquer estilo de lista padrão que possa estar associado ao elemento h1 */
 }
 
 
 
 #blog-navbar-items {
-  list-style: none;
-  display: flex;
+  list-style: none; /* Remove o estilo de lista padrão dos itens de navegação, como marcadores ou números */
+  display: flex; /* Exibe os itens de navegação em um layout flexível, alinhando-os horizontalmente */
 }
 
 #blog-navbar-items a:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 30px; /* Adiciona uma margem à direita de 30px a todos os links dentro de #navbar-items, exceto o último */
 }
 
 #navbar-items a:first-child {
-  margin-left: 30px;
+  margin-left: 30px; /* Adiciona uma margem à esquerda de 30px ao primeiro link dentro de #navbar-items */
 }
 
 a.inside-anchor:hover,
 a.outside-anchor:hover {
-  letter-spacing: 0.1vmin;
-  font-weight: bold;
-  line-height: 30px;
+  letter-spacing: 0.1vmin; /* Aumenta o espaçamento entre letras em 0.1vmin (uma unidade relativa ao tamanho da viewport) ao passar o mouse sobre o link */
+  font-weight: bold; /* Torna o texto do link em negrito ao passar o mouse */
+  line-height: 30px; /* Define a altura da linha para 30px ao passar o mouse */
 }
 
 a.inside-anchor {
-  color: var(--header-inside-anchor);
-  line-height: 30px;
-  font-weight: 600;
+  color: var(--header-inside-anchor); /* Define a cor do texto para links com a classe inside-anchor usando a variável CSS --header-inside-anchor */
+  line-height: 30px; /* Define a altura da linha para 30px */
+  font-weight: 600; /* Define o peso da fonte (espessura) para 600, que é um pouco mais grosso que o normal */
 }
 
 a.outside-anchor {
-  color: var(--header-outside-anchor);
-  line-height: 30px;
-  font-weight: 600;
+  color: var(--header-outside-anchor); /* Define a cor do texto para links com a classe outside-anchor usando a variável CSS --header-outside-anchor */
+  line-height: 30px; /* Define a altura da linha para 30px */
+  font-weight: 600; /* Define o peso da fonte (espessura) para 600 */
 }
 
 
@@ -253,134 +253,134 @@ a.outside-anchor {
 /* Cnteúdo -------------------------------------------------------------------------------------------------------------- */
 
 #content-container {
-  justify-content: space-between;
-  align-items: flex-start;
-  display: flex;
-  gap: 50px;
+  justify-content: space-between; /* Alinha horizontalmente o conteúdo distribuindo o espaço entre elementos */
+  align-items: flex-start; /* Alinha os itens ao topo verticalmente */
+  display: flex; /* Define um container flexível */
+  gap: 50px; /* Espaço entre os elementos filhos */
 }
 
 #left-content {
-  width: auto;
-  box-shadow: -5px 8px 10px 5px rgba(0, 0, 0, 0.4);
-  background: var(--main-background);
-  margin-bottom: 50px;
-  border-radius: 20px;
-  margin-left: 50px;
-  margin-top: 50px;
-  padding: 30px;
+  width: auto; /* Largura automática conforme o conteúdo */
+  box-shadow: -5px 8px 10px 5px rgba(0, 0, 0, 0.4); /* Sombra ao redor do container */
+  background: var(--main-background); /* Cor de fundo definida por variável CSS */
+  margin-bottom: 50px; /* Espaço inferior */
+  border-radius: 20px; /* Bordas arredondadas */
+  margin-left: 50px; /* Espaço à esquerda */
+  margin-top: 50px; /* Espaço acima */
+  padding: 30px; /* Espaço interno do container */
 }
 
 #left-content h1{
-  color: var(--main-title-letter);
-  text-transform: none;
+  color: var(--main-title-letter); /* Cor do título definida por variável */
+  text-transform: none; /* Mantém o texto sem transformação */
 }
 
 p{
-  color: var(--main-secondary-letter);
-  text-transform: none;
-  text-align: justify;
+  color: var(--main-secondary-letter); /* Cor do parágrafo definida por variável */
+  text-transform: none; /* Mantém o texto sem transformação */
+  text-align: justify; /* Justifica o texto */
 }
 
 .img{
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  margin: auto;
+  justify-content: center; /* Centraliza horizontalmente o conteúdo interno */
+  align-items: center; /* Centraliza verticalmente o conteúdo interno */
+  display: flex; /* Define container flexível para centralização */
+  margin: auto; /* Centraliza a própria div dentro do container pai */
 }
 
 .inside-img{
-  width: 330px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 15px;
+  width: 330px; /* Define a largura da imagem */
+  margin-left: auto; /* Centraliza horizontalmente */
+  margin-right: auto; /* Centraliza horizontalmente */
+  border-radius: 15px; /* Bordas arredondadas na imagem */
 }
 
 
 
 #glossary {
-  box-shadow: -5px 8px 10px 5px rgba(0, 0, 0, 0.4);
-  background: var(--main-background);
-  color: var(--main-title-letter);
-  border-radius: 20px;
-  margin-right: 50px;
-  margin-top: 50px;
-  padding: 20px;
-  height: auto;
+  box-shadow: -5px 8px 10px 5px rgba(0, 0, 0, 0.4); /* Sombra ao redor do glossário */
+  background: var(--main-background); /* Cor de fundo definida por variável */
+  color: var(--main-title-letter); /* Cor do texto definida por variável */
+  border-radius: 20px; /* Bordas arredondadas */
+  margin-right: 50px; /* Espaço à direita */
+  margin-top: 50px; /* Espaço acima */
+  padding: 20px; /* Espaço interno do container */
+  height: auto; /* Altura ajusta-se ao conteúdo */
 }
 
 #contact-container {
-  box-shadow: -5px 8px 10px 5px rgba(0, 0, 0, 0.4);
-  background: var(--main-background);
-  color: var(--main-title-letter);
-  border-radius: 20px;
-  margin-right: 50px;
-  margin-top: 50px;
-  padding: 20px;
-  height: auto;
+  box-shadow: -5px 8px 10px 5px rgba(0, 0, 0, 0.4); /* Sombra ao redor do container de contato */
+  background: var(--main-background); /* Cor de fundo definida por variável */
+  color: var(--main-title-letter); /* Cor do texto definida por variável */
+  border-radius: 20px; /* Bordas arredondadas */
+  margin-right: 50px; /* Espaço à direita */
+  margin-top: 50px; /* Espaço acima */
+  padding: 20px; /* Espaço interno do container */
+  height: auto; /* Altura ajusta-se ao conteúdo */
 }
 
 #glossary ul {
-  padding: 0;
+  padding: 0; /* Remove o padding padrão das listas */
 }
 
 .lista_conteudo{
-  margin-left: 30px;
+  margin-left: 30px; /* Espaço à esquerda para a lista */
 }
 
 #glossary h2,
 #glossary ul {
-  margin-left: 20px;
+  margin-left: 20px; /* Espaço à esquerda do título e da lista */
 }
 
 #glossary li {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Espaço abaixo de cada item da lista */
 }
 
 #glossary li:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0; /* Remove espaço do último item */
 }
 
 #glossary ul li a {
-  color: var(--main-title-letter);
+  color: var(--main-title-letter); /* Cor do link definida por variável */
 }
 
 #glossary ul li a {
-  font-size: 10px;
+  font-size: 10px; /* Tamanho da fonte dos links */
 }
 
 #glossary ul li ul li a {
-  font-size: 10px;
+  font-size: 10px; /* Tamanho da fonte de links em listas aninhadas */
 }
 
 #glossary p {
-  text-align: left;
+  text-align: left; /* Alinha o parágrafo à esquerda */
 }
 
 
 
 
 #contact {
-  display: flex;
-  justify-content: space-between; /* ou space-around */
-  gap: 15px
+  display: flex; /* Define container flexível */
+  justify-content: space-between; /* Distribui os elementos com espaço entre eles (ou space-around) */
+  gap: 15px; /* Espaço entre os itens do container */
 }
 
 #contact a:hover {
-  background: var(--button-hover);
-  transform: translateY(5px);
+  background: var(--button-hover); /* Cor de fundo do botão ao passar o mouse */
+  transform: translateY(5px); /* Move o botão 5px para baixo no hover */
 }
 
 #contact a {
-  background: var(--button-color);
-  color: var(--button-background);
-  justify-content: center;
-  display: inline-flex;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 2rem;
-  margin: 0.1rem;
-  height: 4rem;
-  width: 2em;
+  background: var(--button-color); /* Cor de fundo do botão */
+  color: var(--button-background); /* Cor do texto do botão */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  display: inline-flex; /* Define o botão como flexível inline */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  border-radius: 50%; /* Deixa o botão totalmente arredondado */
+  font-size: 2rem; /* Tamanho da fonte do botão */
+  margin: 0.1rem; /* Margem em torno do botão */
+  height: 4rem; /* Altura do botão */
+  width: 2em; /* Largura do botão */
 }
 
 
