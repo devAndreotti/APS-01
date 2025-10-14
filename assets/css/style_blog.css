@@ -48,7 +48,7 @@
 
 
 
-  /* Cores ------------------------------------------------------- */
+  /* Cores de Demonstração (não utilizadas) ------------------------------------------------------- */
 
   --possible-0-color: linear-gradient(90deg, hsl(270, 30%, 20%, 1) 0%, hsl(270, 100%, 30%, 1) 100%);
   --possible-1-color: linear-gradient(90deg, hsl(180, 30%, 20%, 1) 0%, hsl(180, 100%, 30%, 1) 100%);
@@ -394,41 +394,46 @@ p{
 
 @media(max-height: 790px) {
 
+  /* Ajusta o espaçamento interno do container principal de conteúdo */
   #content-container {
-    gap: 25px;
+    gap: 25px; /* Espaço entre elementos filhos */
   }
 
+  /* Ajustes de margem do navbar do blog */
   #blog-navbar-container {
-    margin-right: 25px;
-    margin-left: 25px;
-    margin-top: 20px;
-  
+    margin-right: 25px; /* Margem direita */
+    margin-left: 25px;  /* Margem esquerda */
+    margin-top: 20px;   /* Margem superior */
   }
 
+  /* Ajustes de margem do conteúdo à esquerda */
   #left-content {
-    margin-bottom: 25px;;
-    margin-left: 25px;
-    margin-top: 25px;
+    margin-bottom: 25px; /* Margem inferior */
+    margin-left: 25px;   /* Margem esquerda */
+    margin-top: 25px;    /* Margem superior */
   }
 
+  /* Ajustes de margem do glossário */
   #glossary {
-    margin-right: 25px;
-    margin-top: 25px;
+    margin-right: 25px; /* Margem direita */
+    margin-top: 25px;   /* Margem superior */
   }
 
+  /* Ajustes de margem do container de contato */
   #contact-container {
-    margin-right: 25px;
-    margin-top: 25px;
-
+    margin-right: 25px; /* Margem direita */
+    margin-top: 25px;   /* Margem superior */
   }
-  }
+}
 
+/* Estilos responsivos para telas com altura máxima de 690px */
 @media(max-height: 690px) {
-  
+
+  /* Esconde o container de contato em telas muito pequenas */
   #contact-container {
     display: none;
   }
-  }
+}
 
 
 
@@ -436,107 +441,132 @@ p{
 
 
 
+
+  
 
 /* @Media Largura ------------------------------------------------------------------------------------------------------- */
 
+/* Estilos responsivos para telas com larguramáxima de 1200px */
 @media(max-width: 1200px) {
 
+  /* Reduz o tamanho base da fonte do HTML para 80% */
   html {
-   font-size: 80%;
- }
- }
-
-@media(max-width: 1000px) {
-
-  a,p,h1 {
     font-size: 80%;
   }
+}
 
+/* Estilos responsivos para telas com larguramáxima de 1000px */
+@media(max-width: 1000px) {
+
+  /* Reduz o tamanho de fonte de links, parágrafos e títulos */
+  a, p, h1 {
+    font-size: 80%; /* Reduz o tamanho da fonte para 80% do tamanho original */
+  }
+
+  /* Ajusta espaçamento interno do container principal */
   #content-container {
-    gap: 25px;
+    gap: 25px; /* Espaço entre elementos filhos */
   }
 
+  /* Ajustes de margem do navbar do blog */
   #blog-navbar-container {
-    margin-right: 25px;
-    margin-left: 25px;
-    margin-top: 20px;
+    margin-right: 25px; /* Margem direita */
+    margin-left: 25px;  /* Margem esquerda */
+    margin-top: 20px;   /* Margem superior */
   }
 
-
-
+  /* Ajustes de margem do conteúdo à esquerda */
   #left-content {
-    margin-bottom: 25px;
-    margin-left: 25px;
-    margin-top: 25px;
+    margin-bottom: 25px; /* Margem inferior */
+    margin-left: 25px;   /* Margem esquerda */
+    margin-top: 25px;    /* Margem superior */  
   }
 
+  /* Ajustes de margem do glossário */
   #glossary {
-    margin-right: 25px;
-    margin-top: 25px;
+    margin-right: 25px; /* Margem direita */
+    margin-top: 25px;   /* Margem superior */
   }
 
-  #contact-container{
-    margin-right: 25px;
-    margin-top: 25px;
+  /* Ajustes de margem do container de contato */
+  #contact-container {
+    margin-right: 25px; /* Margem direita */
+    margin-top: 25px;   /* Margem superior */
   }
 
+  /* Reduz tamanho do título do logo */
   #logo h1 {
-   font-size: 1.4rem;
+    font-size: 1.4rem; /* Reduz o tamanho do título para 1.4rem */
   }
 
+  /* Reduz largura da imagem do navbar */
   #blog-navbar img {
-    width: 50px;
+    width: 50px; /* Reduz a largura da imagem para 50px */
   }
 
+  /* Espaçamento entre os itens do navbar, exceto o último */
   #blog-navbar-items a:not(:last-child) {
-    margin-right: 15px;
-  }
-  
-  #navbar-items a:first-child {
-    margin-left: 15px;
+    margin-right: 15px; /* Margem direita entre os itens do navbar */
   }
 
+  /* Espaçamento do primeiro item do navbar */
+  #navbar-items a:first-child {
+    margin-left: 15px; /* Margem esquerda do primeiro item do navbar */
+  }
+
+  /* Reduz o espaçamento interno do container de contato */
   #contact {
-    gap: 5px
+    gap: 5px; /* Espaço entre os itens do container de contato */
   }
-  }
+}
+
+/* Estilos responsivos para telas com largura máxima de 900px */
 
 @media(max-width: 900px) {
 
+  /* O conteúdo à esquerda ocupa toda a largura */
   #left-content {
-    width: 100%;
-  }
-  
-  #glossary{
-    display: none;
+    width: 100%; /* Define a largura do conteúdo à esquerda para 100% */
   }
 
-  #contact-container{
-    display: none;
+  /* Oculta o glossário em telas pequenas */
+  #glossary {
+    display: none; /* Oculta o glossário */
   }
 
+  /* Oculta o container de contato em telas pequenas */
+  #contact-container {
+    display: none; /* Oculta o container de contato */
+  }
+
+  /* Oculta o título do logo */
   #logo h1 {
-    display: none;
+    display: none; /* Oculta o título do logo */
   }
+}
+
+/* Estilos responsivos para telas com largura máxima de 700px */
+@media(max-width: 700px) {
+
+  /* Reduz ainda mais o tamanho de fonte de links, parágrafos e títulos */
+  a, p, h1 {
+    font-size: 60%; /* Reduz o tamanho da fonte para 60% do tamanho original */
   }
 
-  @media(max-width: 700px) {
-
-  a,p,h1 {
-    font-size: 60%;
-  }
-
+  /* Ajusta padding lateral do navbar */
   #blog-navbar {
-    padding-right: 12px;
-    padding-left: 12px;
+    padding-right: 12px; /* Reduz o padding direito para 12px */
+    padding-left: 12px; /* Reduz o padding esquerdo para 12px */
   }
 
+  /* Centraliza o conteúdo principal */
   #content-container {
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
   }
 
+  /* Ajusta a largura do conteúdo à esquerda */
   #left-content {
-    width: 80%;
+    width: 80%; /* Define a largura do conteúdo à esquerda para 80% */
   }
-  }
+}
